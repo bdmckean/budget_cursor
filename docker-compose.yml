@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "18080:8000"
+    volumes:
+      - ./backend:/app
+      - ./progress:/app/progress
+    environment:
+      - PYTHONUNBUFFERED=1
+      - POETRY_NO_INTERACTION=1
+      - POETRY_VENV_IN_PROJECT=0
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "13030:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:18080
+
