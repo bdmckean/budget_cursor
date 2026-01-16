@@ -5,9 +5,10 @@ WORKDIR /app
 # Copy package files first (for better Docker layer caching)
 COPY package.json package-lock.json* ./
 
-# Install dependencies (uses package-lock.json if available)
-RUN npm ci --only=production || npm install
+# Install dependencies (including react-scripts)
+RUN npm install
 
+# Copy source files
 COPY . .
 
 EXPOSE 3000

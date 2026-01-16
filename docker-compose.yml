@@ -8,10 +8,17 @@ services:
     volumes:
       - ./backend:/app
       - ./progress:/app/progress
+    env_file:
+      - .env
     environment:
       - PYTHONUNBUFFERED=1
       - POETRY_NO_INTERACTION=1
       - POETRY_VENV_IN_PROJECT=0
+      - OLLAMA_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.1:8b}
+      - LANGFUSE_PUBLIC_KEY=${LANGFUSE_PUBLIC_KEY:-}
+      - LANGFUSE_SECRET_KEY=${LANGFUSE_SECRET_KEY:-}
+      - LANGFUSE_HOST=${LANGFUSE_HOST:-http://langfuse_server:3000}
 
   frontend:
     build: ./frontend

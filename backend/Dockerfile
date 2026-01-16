@@ -16,6 +16,7 @@ RUN poetry install --no-interaction --no-ansi --no-root
 
 # Copy application code
 COPY app/ ./app/
+COPY categories.json ./
 
 EXPOSE 8000
 
