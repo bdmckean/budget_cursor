@@ -2,6 +2,8 @@
 
 A budget planning application for analyzing and categorizing spending from CSV files. Built with Python (FastAPI) backend and React frontend, containerized with Docker.
 
+> **📊 Technical Comparison**: See detailed architecture comparison with budget_claude (Flask implementation) at [github.com/bdmckean/code_off](https://github.com/bdmckean/code_off)
+
 ## Features
 
 - Upload CSV files for budget analysis

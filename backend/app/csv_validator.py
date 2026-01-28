@@ -5,15 +5,18 @@ This module provides a CSVRowValidator class to validate CSV rows and extract
 transaction data such as dates, amounts, and descriptions.
 """
 
+import logging
 import re
 from datetime import datetime
 from typing import Dict, List, Optional
+
+logger = logging.getLogger(__name__)
 
 
 class CSVRowValidator:
     """
     Validates CSV rows based on the file's header structure.
-    
+
     The validator is initialized with the CSV headers to optimize validation
     by knowing which columns contain date, amount, and description data.
     """
@@ -21,7 +24,7 @@ class CSVRowValidator:
     def __init__(self, headers: List[str]):
         """
         Initialize the validator with CSV headers.
-        
+
         Args:
             headers: List of column names from the CSV header row
         """
@@ -29,25 +32,29 @@ class CSVRowValidator:
         self.headers = headers
         # Also create normalized versions for lookup
         self.normalized_headers = [h.strip() if h else "" for h in headers]
-        
+
         # Find date column(s) - use original headers
         self.date_columns = [
-            i for i, header in enumerate(self.headers)
+            i
+            for i, header in enumerate(self.headers)
             if header and "date" in header.lower()
         ]
-        
+
         # Find amount column(s) - use original headers
         self.amount_columns = [
-            i for i, header in enumerate(self.headers)
-            if header and any(
+            i
+            for i, header in enumerate(self.headers)
+            if header
+            and any(
                 token in header.lower()
                 for token in ["amount", "debit", "credit", "value", "charge"]
             )
         ]
-        
+
         # Find description column(s) - any column that's not date or amount
         self.description_columns = [
-            i for i, header in enumerate(self.headers)
+            i
+            for i, header in enumerate(self.headers)
             if header
             and "date" not in header.lower()
             and not any(
@@ -59,10 +66,10 @@ class CSVRowValidator:
     def extract_transaction_date(self, row_data: Dict[str, str]) -> Optional[datetime]:
         """
         Extract a transaction date from the row data.
-        
+
         Args:
             row_data: Dictionary of column name to value
-            
+
         Returns:
             Parsed datetime object or None if no valid date found
         """
@@ -89,7 +96,7 @@ class CSVRowValidator:
                 value = row_data.get(key)
                 if not value:
                     continue
-                    
+
                 candidate = str(value).strip()
                 if not candidate:
                     continue
@@ -136,10 +143,10 @@ class CSVRowValidator:
     def extract_amount(self, row_data: Dict[str, str]) -> Optional[float]:
         """
         Extract a transaction amount from the row data.
-        
+
         Args:
             row_data: Dictionary of column name to value
-            
+
         Returns:
             Parsed amount as float or None if no valid amount found
         """
@@ -184,11 +191,11 @@ class CSVRowValidator:
     def _parse_amount_value(self, value_str: str, key: str) -> Optional[float]:
         """
         Parse a single amount value string.
-        
+
         Args:
             value_str: The amount string to parse
             key: The column name (for context)
-            
+
         Returns:
             Parsed amount or None if invalid
         """
@@ -228,10 +235,10 @@ class CSVRowValidator:
     def has_description(self, row_data: Dict[str, str]) -> bool:
         """
         Check if the row has a valid description field.
-        
+
         Args:
             row_data: Dictionary of column name to value
-            
+
         Returns:
             True if at least one description field has a non-empty value
         """
@@ -267,15 +274,15 @@ class CSVRowValidator:
     def is_row_valid(self, row_data: Dict[str, str]) -> bool:
         """
         Check if a CSV row has all required fields populated.
-        
+
         A row is considered valid if it has:
         - A valid date
         - A valid amount
         - A description (non-empty text field that's not date/amount)
-        
+
         Args:
             row_data: Dictionary of column name to value
-            
+
         Returns:
             True if the row is valid, False otherwise
         """
@@ -285,26 +292,53 @@ class CSVRowValidator:
         # Check for date
         date = self.extract_transaction_date(row_data)
         if date is None:
-            # Debug: log which date fields were found
+            # Log which date fields were found for debugging
             date_keys = [k for k in row_data.keys() if "date" in k.lower()]
             if date_keys:
-                print(f"DEBUG: Date extraction failed. Date keys: {date_keys}, values: {[row_data.get(k) for k in date_keys]}")
+                logger.debug(
+                    "Date extraction failed. Date keys: %s, values: %s",
+                    date_keys,
+                    [row_data.get(k) for k in date_keys],
+                )
             return False
 
         # Check for amount
         amount = self.extract_amount(row_data)
         if amount is None:
-            # Debug: log which amount fields were found
-            amount_keys = [k for k in row_data.keys() if any(token in k.lower() for token in ["amount", "debit", "credit", "value", "charge"])]
+            # Log which amount fields were found for debugging
+            amount_keys = [
+                k
+                for k in row_data.keys()
+                if any(
+                    token in k.lower()
+                    for token in ["amount", "debit", "credit", "value", "charge"]
+                )
+            ]
             if amount_keys:
-                print(f"DEBUG: Amount extraction failed. Amount keys: {amount_keys}, values: {[row_data.get(k) for k in amount_keys]}")
+                logger.debug(
+                    "Amount extraction failed. Amount keys: %s, values: %s",
+                    amount_keys,
+                    [row_data.get(k) for k in amount_keys],
+                )
             return False
 
         # Check for description
         if not self.has_description(row_data):
-            # Debug: log available fields
-            desc_keys = [k for k in row_data.keys() if "date" not in k.lower() and not any(token in k.lower() for token in ["amount", "debit", "credit", "value", "charge"])]
-            print(f"DEBUG: Description check failed. Available desc keys: {desc_keys}, values: {[row_data.get(k) for k in desc_keys]}")
+            # Log available fields for debugging
+            desc_keys = [
+                k
+                for k in row_data.keys()
+                if "date" not in k.lower()
+                and not any(
+                    token in k.lower()
+                    for token in ["amount", "debit", "credit", "value", "charge"]
+                )
+            ]
+            logger.debug(
+                "Description check failed. Available desc keys: %s, values: %s",
+                desc_keys,
+                [row_data.get(k) for k in desc_keys],
+            )
             return False
 
         return True

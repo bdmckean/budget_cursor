@@ -12,28 +12,27 @@ from dataclasses import dataclass
 
 try:
     from langfuse import Langfuse
-    from langfuse.types import TraceContext
 
     LANGFUSE_AVAILABLE = True
 except ImportError:
     Langfuse = Any  # type: ignore
-    TraceContext = Any  # type: ignore
     LANGFUSE_AVAILABLE = False
 
 
 @dataclass
 class TraceHandle:
-    """Lightweight wrapper for Langfuse trace context."""
+    """Lightweight wrapper for Langfuse trace object."""
 
     client: Any
-    trace_context: TraceContext
+    trace: Any
     root_span: Optional[object] = None
 
     def end(self):
         """End the root span if it is still open."""
         if self.root_span:
             try:
-                self.root_span.end()
+                if hasattr(self.root_span, "end"):
+                    self.root_span.end()
             except Exception:
                 pass
             finally:
@@ -97,25 +96,22 @@ class LangfuseTracer:
             return None
 
         try:
-            # Create a trace ID and context
-            trace_id = self.client.create_trace_id()
-            trace_context = TraceContext(trace_id=trace_id, user_id=user_id or "system")
+            # Create a trace
+            trace = self.client.trace(
+                name=name,
+                user_id=user_id or "system",
+                metadata=metadata or {},
+            )
 
             # Create a root span for the trace
-            root_span = self.client.start_span(
-                trace_context=trace_context,
+            root_span = trace.span(
                 name=name,
                 metadata=metadata or {},
             )
-            print(f"✓ Created trace: {name} (ID: {trace_id})")
-            return TraceHandle(
-                client=self.client, trace_context=trace_context, root_span=root_span
-            )
+            print(f"✓ Created trace: {name}")
+            return TraceHandle(client=self.client, trace=trace, root_span=root_span)
         except Exception as e:
             print(f"Warning: Failed to create trace: {e}")
-            import traceback
-
-            traceback.print_exc()
             return None
 
     def add_generation(
@@ -145,22 +141,17 @@ class LangfuseTracer:
 
         try:
             # Add a generation to the trace
-            generation = self.client.start_generation(
-                trace_context=trace.trace_context,
+            generation = trace.trace.generation(
                 name=name,
                 model=model,
                 input=input_text,
+                output=output_text,
+                usage=usage,
                 metadata=metadata or {},
             )
-            # Update with output and usage, then end
-            generation.update(output=output_text, usage_details=usage)
-            generation.end()
             print(f"✓ Added generation: {name}")
         except Exception as e:
             print(f"Warning: Failed to add generation to trace: {e}")
-            import traceback
-
-            traceback.print_exc()
 
     def add_span(
         self,
@@ -185,22 +176,15 @@ class LangfuseTracer:
 
         try:
             # Add a span to the trace
-            span = self.client.start_span(
-                trace_context=trace.trace_context,
+            trace.trace.span(
                 name=name,
                 input=input_text or "",
+                output=output_text or "",
                 metadata=metadata or {},
             )
-            # Update with output, then end
-            if output_text:
-                span.update(output=output_text)
-            span.end()
             print(f"✓ Added span: {name}")
         except Exception as e:
             print(f"Warning: Failed to add span to trace: {e}")
-            import traceback
-
-            traceback.print_exc()
 
     def end_trace(self, trace: Optional[TraceHandle]) -> None:
         """Finalize a trace by flushing to ensure all events are sent."""
@@ -208,17 +192,13 @@ class LangfuseTracer:
             return
         try:
             # End the root span if needed
-            if trace.root_span and hasattr(trace.root_span, "update"):
-                trace.root_span.update()
+            trace.end()
             # Flush to ensure all events are sent
             if self.client:
                 self.client.flush()
                 print(f"✓ Trace flushed")
         except Exception as e:
             print(f"Warning: Failed to end trace: {e}")
-            import traceback
-
-            traceback.print_exc()
 
 
 # Global instance

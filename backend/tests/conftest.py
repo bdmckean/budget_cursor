@@ -14,19 +14,28 @@ def temp_progress_dir():
     temp_progress_file = Path(temp_dir) / "mapping_progress.json"
     Path(temp_dir).mkdir(exist_ok=True)
     
-    # Patch the PROGRESS_DIR and PROGRESS_FILE in the main module
-    import app.main as main_module
-    original_dir = main_module.PROGRESS_DIR
-    original_file = main_module.PROGRESS_FILE
+    # Patch the progress and mapping paths in the utils module
+    import app.utils as utils_module
+    original_progress_dir = utils_module.PROGRESS_DIR
+    original_progress_file = utils_module.PROGRESS_FILE
+    original_mappings_dir = utils_module.MAPPINGS_DIR
+    original_mappings_file = utils_module.MAPPINGS_FILE
     
-    main_module.PROGRESS_DIR = Path(temp_dir)
-    main_module.PROGRESS_FILE = temp_progress_file
+    utils_module.PROGRESS_DIR = Path(temp_dir) / "progress"
+    utils_module.PROGRESS_DIR.mkdir(exist_ok=True)
+    utils_module.PROGRESS_FILE = utils_module.PROGRESS_DIR / "mapping_progress.json"
+    
+    utils_module.MAPPINGS_DIR = Path(temp_dir) / "mappings"
+    utils_module.MAPPINGS_DIR.mkdir(exist_ok=True)
+    utils_module.MAPPINGS_FILE = utils_module.MAPPINGS_DIR / "mappings.json"
     
     yield temp_dir
     
     # Cleanup: restore original paths and remove temp directory
-    main_module.PROGRESS_DIR = original_dir
-    main_module.PROGRESS_FILE = original_file
+    utils_module.PROGRESS_DIR = original_progress_dir
+    utils_module.PROGRESS_FILE = original_progress_file
+    utils_module.MAPPINGS_DIR = original_mappings_dir
+    utils_module.MAPPINGS_FILE = original_mappings_file
     shutil.rmtree(temp_dir)
 
 

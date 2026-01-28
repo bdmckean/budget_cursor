@@ -99,6 +99,29 @@ mappings/*.json
 .env.local
 .env.*.local
 
+# Additional secrets and credentials
+*credentials*.json
+*credential*.json
+*secret*.json
+*.key
+*.pem
+*.p12
+*.pfx
+service-account*.json
+*-key.json
+*_secret.*
+*_creds.*
+secrets.yaml
+secrets.yml
+.secrets
+.credentials
+.token
+*.token
+auth_token
+.aws/credentials
+.gcp/*.json
+gcloud-key.json
+
 # OS
 .DS_Store
 .DS_Store?

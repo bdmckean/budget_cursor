@@ -44,7 +44,7 @@ def test_upload_csv(client: TestClient, sample_csv_file):
     data = response.json()
     assert data["message"] == "File uploaded successfully"
     assert data["total_rows"] == 3
-    assert len(data["rows"]) == 10  # Returns first 10 for preview
+    assert len(data["rows"]) == min(10, data["total_rows"])
     assert data["rows"][0]["row_index"] == 0
     assert "Date" in data["rows"][0]["original_data"]
     assert data["rows"][0]["mapped"] is False
@@ -152,7 +152,7 @@ def test_get_progress_after_mapping(client: TestClient, sample_csv_file):
 
 def test_progress_persistence(client: TestClient, sample_csv_file, temp_progress_dir):
     """Test that progress is saved and can be retrieved."""
-    import app.main as main_module
+    import app.utils as utils_module
     
     # Upload CSV
     with open(sample_csv_file, "rb") as f:
@@ -162,8 +162,8 @@ def test_progress_persistence(client: TestClient, sample_csv_file, temp_progress
     client.post("/map", json={"row_index": 0, "category": "Groceries"})
     
     # Verify progress file exists and has correct content
-    assert main_module.PROGRESS_FILE.exists()
-    with open(main_module.PROGRESS_FILE, "r") as f:
+    assert utils_module.PROGRESS_FILE.exists()
+    with open(utils_module.PROGRESS_FILE, "r") as f:
         progress_data = json.load(f)
     
     assert len(progress_data) == 3

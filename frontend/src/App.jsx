@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './index.css';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:18080';
@@ -39,6 +40,9 @@ const formatErrorDetail = (detail) => {
 };
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
   const [rows, setRows] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [categories, setCategories] = useState([]);
@@ -58,6 +62,14 @@ function App() {
   const [reviewLoading, setReviewLoading] = useState(false);
   const [autoMapping, setAutoMapping] = useState(false);
   const fileInputRef = React.useRef(null);
+
+  // Sync activeView with URL path
+  useEffect(() => {
+    const path = location.pathname.substring(1) || 'mapping';
+    const validViews = ['mapping', 'summary', 'review'];
+    const view = validViews.includes(path) ? path : 'mapping';
+    setActiveView(view);
+  }, [location]);
 
   useEffect(() => {
     // Load categories
@@ -135,7 +147,9 @@ function App() {
   }, [activeView, loadSummary, loadReview]);
 
   const handleViewChange = (view) => {
-    setActiveView(view);
+    // Navigate to the new view - this updates the URL and browser history
+    navigate(`/${view}`);
+    // activeView will be updated by the useEffect that watches location
     if (view === 'mapping') {
       loadProgress();
     }
@@ -223,7 +237,7 @@ function App() {
 
   const handleReviewItem = (rowIndex) => {
     setCurrentIndex(rowIndex);
-    setActiveView('mapping');
+    navigate('/mapping');
     loadProgress();
   };
 
@@ -255,7 +269,7 @@ function App() {
       
       // Store current file name
       setCurrentFileName(data.source_file || selectedFile.name);
-      setActiveView('mapping');
+      navigate('/mapping');
       
       // After upload, fetch the full progress to get all rows
       const progressResponse = await fetch(`${API_URL}/progress`);
@@ -557,7 +571,7 @@ function App() {
     <div className="app">
       <header className="header">
         <div className="header-top">
-          <h1>Budget Planner</h1>
+          <h1>Budget Planner Cursor</h1>
           <div className="header-actions">
             <div className="view-toggle">
               <button
