@@ -1,0 +1,89 @@
+{
+  "Chase4549_Activity20220101_20221231_20230204.CSV": [
+    {
+      "row_index": 0,
+      "original_data": {
+        "Card": "4549",
+        "Transaction Date": "8/15/22",
+        "Post Date": "8/15/22",
+        "Description": "CREDIT BALANCE REFUND",
+        "Category": "",
+        "Type": "Adjustment",
+        "Amount": "-18",
+        "Memo": "",
+        "": ""
+      },
+      "category": "C Rewards",
+      "mapped": true,
+      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
+    },
+    {
+      "row_index": 1,
+      "original_data": {
+        "Card": "4549",
+        "Transaction Date": "3/29/22",
+        "Post Date": "3/29/22",
+        "Description": "Payment Thank You Bill Pa",
+        "Category": "",
+        "Type": "Payment",
+        "Amount": "20",
+        "Memo": "",
+        "": ""
+      },
+      "category": "Payment",
+      "mapped": true,
+      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
+    },
+    {
+      "row_index": 2,
+      "original_data": {
+        "Card": "4549",
+        "Transaction Date": "3/3/22",
+        "Post Date": "3/3/22",
+        "Description": "GOOGLE *GSUITE_rethlas",
+        "Category": "Merchandise & Inventory",
+        "Type": "Sale",
+        "Amount": "-6",
+        "Memo": "",
+        "": ""
+      },
+      "category": "Business",
+      "mapped": true,
+      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
+    },
+    {
+      "row_index": 3,
+      "original_data": {
+        "Card": "4549",
+        "Transaction Date": "2/2/22",
+        "Post Date": "2/2/22",
+        "Description": "GOOGLE *GSUITE_rethlas",
+        "Category": "Professional Services",
+        "Type": "Sale",
+        "Amount": "-6",
+        "Memo": "",
+        "": ""
+      },
+      "category": null,
+      "mapped": false,
+      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
+    },
+    {
+      "row_index": 4,
+      "original_data": {
+        "Card": "4549",
+        "Transaction Date": "1/2/22",
+        "Post Date": "1/3/22",
+        "Description": "GOOGLE*GSUITE RETHLASO",
+        "Category": "Professional Services",
+        "Type": "Sale",
+        "Amount": "-6",
+        "Memo": "",
+        "": ""
+      },
+      "category": null,
+      "mapped": false,
+      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
+    }
+  ]
+}

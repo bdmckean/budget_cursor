@@ -4,12 +4,12 @@ from pathlib import Path
 from typing import Dict, List
 
 # Progress file paths
-PROGRESS_DIR = Path(__file__).parent.parent.parent / "progress"
+PROGRESS_DIR = Path(__file__).parent.parent / "progress"
 PROGRESS_DIR.mkdir(exist_ok=True)
 PROGRESS_FILE = PROGRESS_DIR / "mapping_progress.json"
 
 # Mappings file paths
-MAPPINGS_DIR = Path(__file__).parent.parent.parent / "mappings"
+MAPPINGS_DIR = Path(__file__).parent.parent / "mappings"
 MAPPINGS_DIR.mkdir(parents=True, exist_ok=True)
 MAPPINGS_FILE = MAPPINGS_DIR / "mappings.json"
 
@@ -25,7 +25,7 @@ def load_progress() -> List[Dict]:
     """Load progress from file"""
     if PROGRESS_FILE.exists():
         try:
-            with open(PROGRESS_FILE, 'r') as f:
+            with open(PROGRESS_FILE, "r") as f:
                 return json.load(f)
         except json.JSONDecodeError:
             return []
@@ -35,7 +35,7 @@ def load_progress() -> List[Dict]:
 def save_progress(rows: List[Dict]):
     """Save progress to file"""
     PROGRESS_DIR.mkdir(exist_ok=True)
-    with open(PROGRESS_FILE, 'w') as f:
+    with open(PROGRESS_FILE, "w") as f:
         json.dump(rows, f, indent=2)
 
 
@@ -190,4 +190,3 @@ def extract_text_from_file(file_path: Path, encoding: str = "utf-8") -> str | No
     except (IOError, UnicodeDecodeError) as e:
         print(f"Error extracting text from {file_path}: {e}")
         return None
-
