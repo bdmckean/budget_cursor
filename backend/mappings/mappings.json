@@ -1,91 +1,4 @@
 {
-  "Chase4549_Activity20220101_20221231_20230204.CSV": [
-    {
-      "row_index": 0,
-      "original_data": {
-        "Card": "4549",
-        "Transaction Date": "8/15/22",
-        "Post Date": "8/15/22",
-        "Description": "CREDIT BALANCE REFUND",
-        "Category": "",
-        "Type": "Adjustment",
-        "Amount": "-18",
-        "Memo": "",
-        "": ""
-      },
-      "category": "C Rewards",
-      "mapped": true,
-      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
-    },
-    {
-      "row_index": 1,
-      "original_data": {
-        "Card": "4549",
-        "Transaction Date": "3/29/22",
-        "Post Date": "3/29/22",
-        "Description": "Payment Thank You Bill Pa",
-        "Category": "",
-        "Type": "Payment",
-        "Amount": "20",
-        "Memo": "",
-        "": ""
-      },
-      "category": "Payment",
-      "mapped": true,
-      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
-    },
-    {
-      "row_index": 2,
-      "original_data": {
-        "Card": "4549",
-        "Transaction Date": "3/3/22",
-        "Post Date": "3/3/22",
-        "Description": "GOOGLE *GSUITE_rethlas",
-        "Category": "Merchandise & Inventory",
-        "Type": "Sale",
-        "Amount": "-6",
-        "Memo": "",
-        "": ""
-      },
-      "category": "Business",
-      "mapped": true,
-      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
-    },
-    {
-      "row_index": 3,
-      "original_data": {
-        "Card": "4549",
-        "Transaction Date": "2/2/22",
-        "Post Date": "2/2/22",
-        "Description": "GOOGLE *GSUITE_rethlas",
-        "Category": "Professional Services",
-        "Type": "Sale",
-        "Amount": "-6",
-        "Memo": "",
-        "": ""
-      },
-      "category": "Business",
-      "mapped": true,
-      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
-    },
-    {
-      "row_index": 4,
-      "original_data": {
-        "Card": "4549",
-        "Transaction Date": "1/2/22",
-        "Post Date": "1/3/22",
-        "Description": "GOOGLE*GSUITE RETHLASO",
-        "Category": "Professional Services",
-        "Type": "Sale",
-        "Amount": "-6",
-        "Memo": "",
-        "": ""
-      },
-      "category": "Business",
-      "mapped": true,
-      "source_file": "Chase4549_Activity20220101_20221231_20230204.CSV"
-    }
-  ],
   "Chase8592_Activity20250101_20251231_20260313.CSV": [
     {
       "row_index": 0,
@@ -1853,8 +1766,8 @@
         "Amount": "-1.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1868,8 +1781,8 @@
         "Amount": "-96.97",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1883,8 +1796,8 @@
         "Amount": "-63.55",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1898,8 +1811,8 @@
         "Amount": "-59.96",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Gifts",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1913,8 +1826,8 @@
         "Amount": "-51.10",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1928,8 +1841,8 @@
         "Amount": "-3.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Entertainment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1943,8 +1856,8 @@
         "Amount": "-38.70",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1958,8 +1871,8 @@
         "Amount": "-14.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Entertainment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1973,8 +1886,8 @@
         "Amount": "-27.14",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -1988,8 +1901,8 @@
         "Amount": "-9.24",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2003,8 +1916,8 @@
         "Amount": "-36.80",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2018,8 +1931,8 @@
         "Amount": "-60.43",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2033,8 +1946,8 @@
         "Amount": "-7.11",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2048,8 +1961,8 @@
         "Amount": "-54.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2063,8 +1976,8 @@
         "Amount": "-5.33",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2078,8 +1991,8 @@
         "Amount": "-15.62",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2093,8 +2006,8 @@
         "Amount": "-66.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Business",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2108,8 +2021,8 @@
         "Amount": "100.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2123,8 +2036,8 @@
         "Amount": "-17.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2138,8 +2051,8 @@
         "Amount": "-15.74",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2153,8 +2066,8 @@
         "Amount": "-7.46",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2168,8 +2081,8 @@
         "Amount": "-99.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2183,8 +2096,8 @@
         "Amount": "-68.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2198,8 +2111,8 @@
         "Amount": "-47.80",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2213,8 +2126,8 @@
         "Amount": "-28.21",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2228,8 +2141,8 @@
         "Amount": "-102.92",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2243,8 +2156,8 @@
         "Amount": "-38.28",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2258,8 +2171,8 @@
         "Amount": "-6.99",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2273,8 +2186,8 @@
         "Amount": "-3.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2288,8 +2201,8 @@
         "Amount": "-3.42",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2303,8 +2216,8 @@
         "Amount": "-3.48",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2318,8 +2231,8 @@
         "Amount": "-20.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2333,8 +2246,8 @@
         "Amount": "-64.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2348,8 +2261,8 @@
         "Amount": "-9.74",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2363,8 +2276,8 @@
         "Amount": "-9.27",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2378,8 +2291,8 @@
         "Amount": "-51.58",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2393,8 +2306,8 @@
         "Amount": "-5.78",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2408,8 +2321,8 @@
         "Amount": "-2.63",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2423,8 +2336,8 @@
         "Amount": "-62.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2438,8 +2351,8 @@
         "Amount": "-3.47",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2453,8 +2366,8 @@
         "Amount": "-37.04",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Gifts",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2468,8 +2381,8 @@
         "Amount": "-17.39",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Personal Care",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2483,8 +2396,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Business",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2498,8 +2411,8 @@
         "Amount": "-5.44",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Entertainment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2513,8 +2426,8 @@
         "Amount": "-29.90",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2528,8 +2441,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Business",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2543,8 +2456,8 @@
         "Amount": "-28.40",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2558,8 +2471,8 @@
         "Amount": "-25.01",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2573,8 +2486,8 @@
         "Amount": "-27.12",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2588,8 +2501,8 @@
         "Amount": "-3.59",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2603,8 +2516,8 @@
         "Amount": "-56.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2618,8 +2531,8 @@
         "Amount": "-20.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2633,8 +2546,8 @@
         "Amount": "0.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Fees",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2648,8 +2561,8 @@
         "Amount": "-22.96",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2663,8 +2576,8 @@
         "Amount": "-11.46",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2678,8 +2591,8 @@
         "Amount": "-70.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Fees",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2693,8 +2606,8 @@
         "Amount": "-95.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Fees",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2708,8 +2621,8 @@
         "Amount": "-25.17",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Fees",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2723,8 +2636,8 @@
         "Amount": "-108.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2738,8 +2651,8 @@
         "Amount": "-8.72",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Fees",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2753,8 +2666,8 @@
         "Amount": "-9.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2768,8 +2681,8 @@
         "Amount": "-10.42",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2783,8 +2696,8 @@
         "Amount": "-30.03",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2798,8 +2711,8 @@
         "Amount": "-76.42",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2813,8 +2726,8 @@
         "Amount": "-2.99",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2828,8 +2741,8 @@
         "Amount": "-12.04",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2843,8 +2756,8 @@
         "Amount": "-25.08",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2858,8 +2771,8 @@
         "Amount": "-3.27",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2873,8 +2786,8 @@
         "Amount": "-22.76",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2888,8 +2801,8 @@
         "Amount": "-22.02",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2903,8 +2816,8 @@
         "Amount": "-25.72",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2918,8 +2831,8 @@
         "Amount": "-3.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2933,8 +2846,8 @@
         "Amount": "-13.17",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2948,8 +2861,8 @@
         "Amount": "-61.58",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2963,8 +2876,8 @@
         "Amount": "-45.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2978,8 +2891,8 @@
         "Amount": "-27.03",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -2993,8 +2906,8 @@
         "Amount": "-7.69",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3008,8 +2921,8 @@
         "Amount": "-112.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3023,8 +2936,8 @@
         "Amount": "-51.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3038,8 +2951,8 @@
         "Amount": "-14.69",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3053,8 +2966,8 @@
         "Amount": "-6.29",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3068,8 +2981,8 @@
         "Amount": "-41.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3083,8 +2996,8 @@
         "Amount": "-11.02",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3098,8 +3011,8 @@
         "Amount": "-33.87",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3113,8 +3026,8 @@
         "Amount": "-3.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3128,8 +3041,8 @@
         "Amount": "-14.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3143,8 +3056,8 @@
         "Amount": "-26.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3158,8 +3071,8 @@
         "Amount": "-55.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3173,8 +3086,8 @@
         "Amount": "-32.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3188,8 +3101,8 @@
         "Amount": "-19.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3203,8 +3116,8 @@
         "Amount": "-99.59",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3218,8 +3131,8 @@
         "Amount": "-5.09",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3233,8 +3146,8 @@
         "Amount": "-22.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3248,8 +3161,8 @@
         "Amount": "-27.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3263,8 +3176,8 @@
         "Amount": "-22.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3278,8 +3191,8 @@
         "Amount": "-9.91",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3293,8 +3206,8 @@
         "Amount": "-17.91",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3308,8 +3221,8 @@
         "Amount": "-104.05",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3323,8 +3236,8 @@
         "Amount": "-2.58",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3338,8 +3251,8 @@
         "Amount": "-66.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Bills & Utilities",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3353,8 +3266,8 @@
         "Amount": "-115.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3368,8 +3281,8 @@
         "Amount": "-5.29",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3383,8 +3296,8 @@
         "Amount": "-77.20",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3398,8 +3311,8 @@
         "Amount": "10656.22",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3413,8 +3326,8 @@
         "Amount": "100.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3428,8 +3341,8 @@
         "Amount": "-4.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3443,8 +3356,8 @@
         "Amount": "-32.41",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3458,8 +3371,8 @@
         "Amount": "-18.84",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3473,8 +3386,8 @@
         "Amount": "-37.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3488,8 +3401,8 @@
         "Amount": "-16.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3503,8 +3416,8 @@
         "Amount": "-21.79",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3518,8 +3431,8 @@
         "Amount": "-36.20",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3533,8 +3446,8 @@
         "Amount": "-4.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3548,8 +3461,8 @@
         "Amount": "-18.59",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3563,8 +3476,8 @@
         "Amount": "-7.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3578,8 +3491,8 @@
         "Amount": "-4.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3593,8 +3506,8 @@
         "Amount": "-22.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3608,8 +3521,8 @@
         "Amount": "-31.15",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3623,8 +3536,8 @@
         "Amount": "-49.14",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3638,8 +3551,8 @@
         "Amount": "-23.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3653,8 +3566,8 @@
         "Amount": "-18.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3668,8 +3581,8 @@
         "Amount": "-3.88",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3683,8 +3596,8 @@
         "Amount": "-83.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3698,8 +3611,8 @@
         "Amount": "-18.42",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3713,8 +3626,8 @@
         "Amount": "-7.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3728,8 +3641,8 @@
         "Amount": "-48.59",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3743,8 +3656,8 @@
         "Amount": "-72.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3758,8 +3671,8 @@
         "Amount": "-4.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3773,8 +3686,8 @@
         "Amount": "-48.22",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3788,8 +3701,8 @@
         "Amount": "-36.64",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3803,8 +3716,8 @@
         "Amount": "-7.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3818,8 +3731,8 @@
         "Amount": "-328.91",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3833,8 +3746,8 @@
         "Amount": "-38.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3848,8 +3761,8 @@
         "Amount": "-87.49",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3863,8 +3776,8 @@
         "Amount": "-195.32",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Auto",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3878,8 +3791,8 @@
         "Amount": "-8.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3893,8 +3806,8 @@
         "Amount": "-36.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3908,8 +3821,8 @@
         "Amount": "-4.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3923,8 +3836,8 @@
         "Amount": "-16.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3938,8 +3851,8 @@
         "Amount": "2549.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Auto",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3953,8 +3866,8 @@
         "Amount": "-78.04",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3968,8 +3881,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3983,8 +3896,8 @@
         "Amount": "-23.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -3998,8 +3911,8 @@
         "Amount": "-83.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4013,8 +3926,8 @@
         "Amount": "-110.76",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4028,8 +3941,8 @@
         "Amount": "-20.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4043,8 +3956,8 @@
         "Amount": "-52.64",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4058,8 +3971,8 @@
         "Amount": "-27.79",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4073,8 +3986,8 @@
         "Amount": "-22.29",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4088,8 +4001,8 @@
         "Amount": "-4.64",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4103,8 +4016,8 @@
         "Amount": "-4.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4118,8 +4031,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4133,8 +4046,8 @@
         "Amount": "-35.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4148,8 +4061,8 @@
         "Amount": "-24.65",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4163,8 +4076,8 @@
         "Amount": "-27.59",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4178,8 +4091,8 @@
         "Amount": "-36.70",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4193,8 +4106,8 @@
         "Amount": "-8.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4208,8 +4121,8 @@
         "Amount": "-8.65",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4223,8 +4136,8 @@
         "Amount": "-4.43",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4238,8 +4151,8 @@
         "Amount": "-11.49",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4253,8 +4166,8 @@
         "Amount": "-14.85",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4268,8 +4181,8 @@
         "Amount": "-30.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4283,8 +4196,8 @@
         "Amount": "-31.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4298,8 +4211,8 @@
         "Amount": "-25.09",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4313,8 +4226,8 @@
         "Amount": "-118.69",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Fees",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4328,8 +4241,8 @@
         "Amount": "-8.72",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4343,8 +4256,8 @@
         "Amount": "-61.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4358,8 +4271,8 @@
         "Amount": "-27.69",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4373,8 +4286,8 @@
         "Amount": "-13.59",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4388,8 +4301,8 @@
         "Amount": "-45.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4403,8 +4316,8 @@
         "Amount": "-4.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4418,8 +4331,8 @@
         "Amount": "-19.94",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4433,8 +4346,8 @@
         "Amount": "-31.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4448,8 +4361,8 @@
         "Amount": "-40.07",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4463,8 +4376,8 @@
         "Amount": "-2.99",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4478,8 +4391,8 @@
         "Amount": "-56.36",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4493,8 +4406,8 @@
         "Amount": "-12.27",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4508,8 +4421,8 @@
         "Amount": "-42.47",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4523,8 +4436,8 @@
         "Amount": "-10.18",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4538,8 +4451,8 @@
         "Amount": "-44.19",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4553,8 +4466,8 @@
         "Amount": "-37.02",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4568,8 +4481,8 @@
         "Amount": "-4.13",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4583,8 +4496,8 @@
         "Amount": "-37.92",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4598,8 +4511,8 @@
         "Amount": "-13.64",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4613,8 +4526,8 @@
         "Amount": "-400.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4628,8 +4541,8 @@
         "Amount": "-36.13",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4643,8 +4556,8 @@
         "Amount": "-2.67",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4658,8 +4571,8 @@
         "Amount": "-65.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Gifts",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4673,8 +4586,8 @@
         "Amount": "-110.07",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4688,8 +4601,8 @@
         "Amount": "-26.84",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4703,8 +4616,8 @@
         "Amount": "-55.02",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4718,8 +4631,8 @@
         "Amount": "-199.79",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4733,8 +4646,8 @@
         "Amount": "-3.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4748,8 +4661,8 @@
         "Amount": "-34.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4763,8 +4676,8 @@
         "Amount": "-1.65",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4778,8 +4691,8 @@
         "Amount": "-49.53",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Personal Care",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4793,8 +4706,8 @@
         "Amount": "-31.40",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Books",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4808,8 +4721,8 @@
         "Amount": "-16.96",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4823,8 +4736,8 @@
         "Amount": "-5.09",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4838,8 +4751,8 @@
         "Amount": "-56.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4853,8 +4766,8 @@
         "Amount": "-340.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4868,8 +4781,8 @@
         "Amount": "-43.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4883,8 +4796,8 @@
         "Amount": "-66.48",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4898,8 +4811,8 @@
         "Amount": "-60.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Personal Care",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4913,8 +4826,8 @@
         "Amount": "-1.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4928,8 +4841,8 @@
         "Amount": "-49.94",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4943,8 +4856,8 @@
         "Amount": "-45.91",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4958,8 +4871,8 @@
         "Amount": "-21.62",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4973,8 +4886,8 @@
         "Amount": "-317.53",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -4988,8 +4901,8 @@
         "Amount": "-3.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5003,8 +4916,8 @@
         "Amount": "-38.91",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5018,8 +4931,8 @@
         "Amount": "-41.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5033,8 +4946,8 @@
         "Amount": "-14.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Entertainment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5048,8 +4961,8 @@
         "Amount": "-29.81",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5063,8 +4976,8 @@
         "Amount": "-21.79",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5078,8 +4991,8 @@
         "Amount": "-6.58",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Auto",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5093,8 +5006,8 @@
         "Amount": "-88.07",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5108,8 +5021,8 @@
         "Amount": "-10.49",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5123,8 +5036,8 @@
         "Amount": "-12.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5138,8 +5051,8 @@
         "Amount": "-34.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5153,8 +5066,8 @@
         "Amount": "-59.15",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5168,8 +5081,8 @@
         "Amount": "-187.40",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5183,8 +5096,8 @@
         "Amount": "-383.64",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5198,8 +5111,8 @@
         "Amount": "-35.62",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5213,8 +5126,8 @@
         "Amount": "-13.36",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5228,8 +5141,8 @@
         "Amount": "-2.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5243,8 +5156,8 @@
         "Amount": "-55.40",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5258,8 +5171,8 @@
         "Amount": "-7.74",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5273,8 +5186,8 @@
         "Amount": "-14.24",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5288,8 +5201,8 @@
         "Amount": "-30.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Entertainment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5303,8 +5216,8 @@
         "Amount": "-97.58",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5318,8 +5231,8 @@
         "Amount": "-8.63",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5333,8 +5246,8 @@
         "Amount": "-21.69",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5348,8 +5261,8 @@
         "Amount": "-3.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5363,8 +5276,8 @@
         "Amount": "-6.57",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5378,8 +5291,8 @@
         "Amount": "-13.74",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5393,8 +5306,8 @@
         "Amount": "-66.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Bills & Utilities",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5408,8 +5321,8 @@
         "Amount": "100.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5423,8 +5336,8 @@
         "Amount": "-30.18",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5438,8 +5351,8 @@
         "Amount": "-29.87",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5453,8 +5366,8 @@
         "Amount": "-7.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5468,8 +5381,8 @@
         "Amount": "-6.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5483,8 +5396,8 @@
         "Amount": "-20.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5498,8 +5411,8 @@
         "Amount": "-27.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5513,8 +5426,8 @@
         "Amount": "-22.29",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5528,8 +5441,8 @@
         "Amount": "-24.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5543,8 +5456,8 @@
         "Amount": "-42.46",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5558,8 +5471,8 @@
         "Amount": "-29.95",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5573,8 +5486,8 @@
         "Amount": "-4.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5588,8 +5501,8 @@
         "Amount": "-4.28",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5603,8 +5516,8 @@
         "Amount": "-27.46",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5618,8 +5531,8 @@
         "Amount": "-75.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5633,8 +5546,8 @@
         "Amount": "-42.95",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5648,8 +5561,8 @@
         "Amount": "-31.01",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5663,8 +5576,8 @@
         "Amount": "-58.14",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5678,8 +5591,8 @@
         "Amount": "-21.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5693,8 +5606,8 @@
         "Amount": "-5.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5708,8 +5621,8 @@
         "Amount": "-27.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5723,8 +5636,8 @@
         "Amount": "-2549.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Auto",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5738,8 +5651,8 @@
         "Amount": "-59.10",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5753,8 +5666,8 @@
         "Amount": "-64.88",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5768,8 +5681,8 @@
         "Amount": "-4.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5783,8 +5696,8 @@
         "Amount": "-20.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5798,8 +5711,8 @@
         "Amount": "-67.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5813,8 +5726,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5828,8 +5741,8 @@
         "Amount": "-70.65",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5843,8 +5756,8 @@
         "Amount": "-62.76",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5858,8 +5771,8 @@
         "Amount": "-89.08",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5873,8 +5786,8 @@
         "Amount": "-5.31",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5888,8 +5801,8 @@
         "Amount": "-56.68",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5903,8 +5816,8 @@
         "Amount": "-36.62",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5918,8 +5831,8 @@
         "Amount": "-100.92",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5933,8 +5846,8 @@
         "Amount": "-65.97",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5948,8 +5861,8 @@
         "Amount": "-47.58",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5963,8 +5876,8 @@
         "Amount": "-18.84",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5978,8 +5891,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Subscriptions",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -5993,8 +5906,8 @@
         "Amount": "-7.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6008,8 +5921,8 @@
         "Amount": "-5.84",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6023,8 +5936,8 @@
         "Amount": "-33.84",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6038,8 +5951,8 @@
         "Amount": "-740.11",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6053,8 +5966,8 @@
         "Amount": "-20.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Other",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6068,8 +5981,8 @@
         "Amount": "-39.59",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6083,8 +5996,8 @@
         "Amount": "-75.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Business",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6098,8 +6011,8 @@
         "Amount": "-15.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Books",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6113,8 +6026,8 @@
         "Amount": "-27.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6128,8 +6041,8 @@
         "Amount": "-8.72",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Subscriptions",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6143,8 +6056,8 @@
         "Amount": "-25.08",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6158,8 +6071,8 @@
         "Amount": "-2.99",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6173,8 +6086,8 @@
         "Amount": "-66.12",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6188,8 +6101,8 @@
         "Amount": "-4.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6203,8 +6116,8 @@
         "Amount": "-30.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6218,8 +6131,8 @@
         "Amount": "-28.85",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6233,8 +6146,8 @@
         "Amount": "-49.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Books",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6248,8 +6161,8 @@
         "Amount": "-45.02",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6263,8 +6176,8 @@
         "Amount": "-28.33",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6278,8 +6191,8 @@
         "Amount": "-37.40",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6293,8 +6206,8 @@
         "Amount": "-43.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6308,8 +6221,8 @@
         "Amount": "-27.30",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6323,8 +6236,8 @@
         "Amount": "-453.53",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6338,8 +6251,8 @@
         "Amount": "-50.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6353,8 +6266,8 @@
         "Amount": "-16.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6368,8 +6281,8 @@
         "Amount": "-5.09",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6383,8 +6296,8 @@
         "Amount": "-20.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6398,8 +6311,8 @@
         "Amount": "-40.32",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6413,8 +6326,8 @@
         "Amount": "-4.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6428,8 +6341,8 @@
         "Amount": "-21.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6443,8 +6356,8 @@
         "Amount": "-87.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6458,8 +6371,8 @@
         "Amount": "-87.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6473,8 +6386,8 @@
         "Amount": "-347.42",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6488,8 +6401,8 @@
         "Amount": "-89.21",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6503,8 +6416,8 @@
         "Amount": "-20.28",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6518,8 +6431,8 @@
         "Amount": "-11.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6533,8 +6446,8 @@
         "Amount": "-27.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6548,8 +6461,8 @@
         "Amount": "-1.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6563,8 +6476,8 @@
         "Amount": "-5.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6578,8 +6491,8 @@
         "Amount": "4451.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6593,8 +6506,8 @@
         "Amount": "-3.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6608,8 +6521,8 @@
         "Amount": "-10.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6623,8 +6536,8 @@
         "Amount": "-24.67",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6638,8 +6551,8 @@
         "Amount": "-4.63",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6653,8 +6566,8 @@
         "Amount": "-3.13",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6668,8 +6581,8 @@
         "Amount": "-1.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6683,8 +6596,8 @@
         "Amount": "-8.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6698,8 +6611,8 @@
         "Amount": "-8.12",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6713,8 +6626,8 @@
         "Amount": "-27.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6728,8 +6641,8 @@
         "Amount": "-68.09",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Bills & Utilities",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6743,8 +6656,8 @@
         "Amount": "-54.32",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6758,8 +6671,8 @@
         "Amount": "-4.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6773,8 +6686,8 @@
         "Amount": "100.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6788,8 +6701,8 @@
         "Amount": "-24.45",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6803,8 +6716,8 @@
         "Amount": "-31.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Personal Care",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6818,8 +6731,8 @@
         "Amount": "-46.57",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6833,8 +6746,8 @@
         "Amount": "-43.41",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6848,8 +6761,8 @@
         "Amount": "-34.13",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6863,8 +6776,8 @@
         "Amount": "-40.24",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6878,8 +6791,8 @@
         "Amount": "-7.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6893,8 +6806,8 @@
         "Amount": "-17.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6908,8 +6821,8 @@
         "Amount": "-46.76",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6923,8 +6836,8 @@
         "Amount": "-60.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6938,8 +6851,8 @@
         "Amount": "-32.44",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6953,8 +6866,8 @@
         "Amount": "-53.41",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6968,8 +6881,8 @@
         "Amount": "-60.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6983,8 +6896,8 @@
         "Amount": "-20.94",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -6998,8 +6911,8 @@
         "Amount": "-25.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7013,8 +6926,8 @@
         "Amount": "-85.19",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7028,8 +6941,8 @@
         "Amount": "-7.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7043,8 +6956,8 @@
         "Amount": "-35.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7058,8 +6971,8 @@
         "Amount": "-3.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Other",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7073,8 +6986,8 @@
         "Amount": "-42.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7088,8 +7001,8 @@
         "Amount": "-152.52",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7103,8 +7016,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7118,8 +7031,8 @@
         "Amount": "-28.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7133,8 +7046,8 @@
         "Amount": "-51.93",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7148,8 +7061,8 @@
         "Amount": "-77.37",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7163,8 +7076,8 @@
         "Amount": "-28.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7178,8 +7091,8 @@
         "Amount": "-4.90",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Books",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7193,8 +7106,8 @@
         "Amount": "-28.63",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7208,8 +7121,8 @@
         "Amount": "-39.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7223,8 +7136,8 @@
         "Amount": "-93.44",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7238,8 +7151,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7253,8 +7166,8 @@
         "Amount": "-23.08",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7268,8 +7181,8 @@
         "Amount": "-110.62",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7283,8 +7196,8 @@
         "Amount": "-35.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7298,8 +7211,8 @@
         "Amount": "-10.90",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7313,8 +7226,8 @@
         "Amount": "-85.11",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7328,8 +7241,8 @@
         "Amount": "-16.05",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7343,8 +7256,8 @@
         "Amount": "-1.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7358,8 +7271,8 @@
         "Amount": "-1.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7373,8 +7286,8 @@
         "Amount": "-37.15",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7388,8 +7301,8 @@
         "Amount": "-112.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7403,8 +7316,8 @@
         "Amount": "-21.46",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7418,8 +7331,8 @@
         "Amount": "-2.67",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7433,8 +7346,8 @@
         "Amount": "-31.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7448,8 +7361,8 @@
         "Amount": "-6.20",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7463,8 +7376,8 @@
         "Amount": "-2.90",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7478,8 +7391,8 @@
         "Amount": "-6.88",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7493,8 +7406,8 @@
         "Amount": "-74.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7508,8 +7421,8 @@
         "Amount": "-8.39",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7523,8 +7436,8 @@
         "Amount": "-25.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7538,8 +7451,8 @@
         "Amount": "-39.10",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7553,8 +7466,8 @@
         "Amount": "-11.37",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7568,8 +7481,8 @@
         "Amount": "-2.53",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7583,8 +7496,8 @@
         "Amount": "-2.99",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7598,8 +7511,8 @@
         "Amount": "-8.40",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7613,8 +7526,8 @@
         "Amount": "-21.53",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7628,8 +7541,8 @@
         "Amount": "-7.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7643,8 +7556,8 @@
         "Amount": "-122.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7658,8 +7571,8 @@
         "Amount": "-24.55",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7673,8 +7586,8 @@
         "Amount": "-46.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7688,8 +7601,8 @@
         "Amount": "-101.53",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7703,8 +7616,8 @@
         "Amount": "-7.76",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7718,8 +7631,8 @@
         "Amount": "-79.86",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7733,8 +7646,8 @@
         "Amount": "-15.45",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7748,8 +7661,8 @@
         "Amount": "-9.45",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7763,8 +7676,8 @@
         "Amount": "-83.33",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7778,8 +7691,8 @@
         "Amount": "-45.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7793,8 +7706,8 @@
         "Amount": "-32.64",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7808,8 +7721,8 @@
         "Amount": "-17.58",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7823,8 +7736,8 @@
         "Amount": "-15.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7838,8 +7751,8 @@
         "Amount": "-50.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7853,8 +7766,8 @@
         "Amount": "-20.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7868,8 +7781,8 @@
         "Amount": "-3.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7883,8 +7796,8 @@
         "Amount": "-207.39",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7898,8 +7811,8 @@
         "Amount": "-8.29",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7913,8 +7826,8 @@
         "Amount": "-10.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7928,8 +7841,8 @@
         "Amount": "-31.88",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7943,8 +7856,8 @@
         "Amount": "-119.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7958,8 +7871,8 @@
         "Amount": "-7.70",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7973,8 +7886,8 @@
         "Amount": "-30.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -7988,8 +7901,8 @@
         "Amount": "-5.14",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Household",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8003,8 +7916,8 @@
         "Amount": "-90.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8018,8 +7931,8 @@
         "Amount": "-8.17",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8033,8 +7946,8 @@
         "Amount": "-66.73",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Auto",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8048,8 +7961,8 @@
         "Amount": "-8.17",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8063,8 +7976,8 @@
         "Amount": "-23.82",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8078,8 +7991,8 @@
         "Amount": "-19.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8093,8 +8006,8 @@
         "Amount": "100.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8108,8 +8021,8 @@
         "Amount": "-62.72",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8123,8 +8036,8 @@
         "Amount": "-1.99",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8138,8 +8051,8 @@
         "Amount": "-27.48",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8153,8 +8066,8 @@
         "Amount": "-181.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8168,8 +8081,8 @@
         "Amount": "4340.02",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8183,8 +8096,8 @@
         "Amount": "-47.76",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8198,8 +8111,8 @@
         "Amount": "-29.83",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8213,8 +8126,8 @@
         "Amount": "-150.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Gifts",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8228,8 +8141,8 @@
         "Amount": "-33.37",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8243,8 +8156,8 @@
         "Amount": "-19.68",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8258,8 +8171,8 @@
         "Amount": "-11.13",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8273,8 +8186,8 @@
         "Amount": "-11.68",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8288,8 +8201,8 @@
         "Amount": "-27.57",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8303,8 +8216,8 @@
         "Amount": "-9.39",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8318,8 +8231,8 @@
         "Amount": "-3.87",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8333,8 +8246,8 @@
         "Amount": "-3.47",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8348,8 +8261,8 @@
         "Amount": "-61.48",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8363,8 +8276,8 @@
         "Amount": "-30.93",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8378,8 +8291,8 @@
         "Amount": "-63.65",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8393,8 +8306,8 @@
         "Amount": "-75.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8408,8 +8321,8 @@
         "Amount": "-126.65",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8423,8 +8336,8 @@
         "Amount": "-83.68",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8438,8 +8351,8 @@
         "Amount": "-58.79",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8453,8 +8366,8 @@
         "Amount": "-93.49",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8468,8 +8381,8 @@
         "Amount": "-20.77",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Subscriptions",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8483,8 +8396,8 @@
         "Amount": "-8.27",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8498,8 +8411,8 @@
         "Amount": "-21.45",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8513,8 +8426,8 @@
         "Amount": "-35.55",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8528,8 +8441,8 @@
         "Amount": "-38.86",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8543,8 +8456,8 @@
         "Amount": "-26.34",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8558,8 +8471,8 @@
         "Amount": "-14.21",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8573,8 +8486,8 @@
         "Amount": "-19.48",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8588,8 +8501,8 @@
         "Amount": "-2.99",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8603,8 +8516,8 @@
         "Amount": "-90.48",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8618,8 +8531,8 @@
         "Amount": "-45.31",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8633,8 +8546,8 @@
         "Amount": "-7.05",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8648,8 +8561,8 @@
         "Amount": "-40.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8663,8 +8576,8 @@
         "Amount": "-66.42",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8678,8 +8591,8 @@
         "Amount": "-36.30",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8693,8 +8606,8 @@
         "Amount": "-21.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8708,8 +8621,8 @@
         "Amount": "-61.90",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8723,8 +8636,8 @@
         "Amount": "-16.83",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8738,8 +8651,8 @@
         "Amount": "-14.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8753,8 +8666,8 @@
         "Amount": "-4.10",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8768,8 +8681,8 @@
         "Amount": "-48.92",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8783,8 +8696,8 @@
         "Amount": "-242.75",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8798,8 +8711,8 @@
         "Amount": "-3.26",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8813,8 +8726,8 @@
         "Amount": "-35.50",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8828,8 +8741,8 @@
         "Amount": "-50.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8843,8 +8756,8 @@
         "Amount": "-58.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8858,8 +8771,8 @@
         "Amount": "-34.51",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8873,8 +8786,8 @@
         "Amount": "-85.11",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8888,8 +8801,8 @@
         "Amount": "-477.33",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Travel",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8903,8 +8816,8 @@
         "Amount": "-10.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8918,8 +8831,8 @@
         "Amount": "-6.10",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Other",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8933,8 +8846,8 @@
         "Amount": "-48.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8948,8 +8861,8 @@
         "Amount": "-3.39",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Healthcare",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8963,8 +8876,8 @@
         "Amount": "-64.57",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8978,8 +8891,8 @@
         "Amount": "-9.22",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -8993,8 +8906,8 @@
         "Amount": "-9.22",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9008,8 +8921,8 @@
         "Amount": "-23.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9023,8 +8936,8 @@
         "Amount": "-9.22",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9038,8 +8951,8 @@
         "Amount": "-54.89",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9053,8 +8966,8 @@
         "Amount": "-13.78",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9068,8 +8981,8 @@
         "Amount": "-73.55",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9083,8 +8996,8 @@
         "Amount": "-9.84",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9098,8 +9011,8 @@
         "Amount": "-66.70",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Bills & Utilities",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9113,8 +9026,8 @@
         "Amount": "-389.85",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9128,8 +9041,8 @@
         "Amount": "100.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9143,8 +9056,8 @@
         "Amount": "-75.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9158,8 +9071,8 @@
         "Amount": "-71.19",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9173,8 +9086,8 @@
         "Amount": "-13.35",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9188,8 +9101,8 @@
         "Amount": "-61.91",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9203,8 +9116,8 @@
         "Amount": "5065.79",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Payment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9218,8 +9131,8 @@
         "Amount": "-203.28",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9233,8 +9146,8 @@
         "Amount": "-11.02",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9248,8 +9161,8 @@
         "Amount": "-116.10",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9263,8 +9176,8 @@
         "Amount": "-21.95",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9278,8 +9191,8 @@
         "Amount": "-45.48",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9293,8 +9206,8 @@
         "Amount": "-32.41",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9308,8 +9221,8 @@
         "Amount": "-76.98",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9323,8 +9236,8 @@
         "Amount": "-1.92",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9338,8 +9251,8 @@
         "Amount": "-10.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9353,8 +9266,8 @@
         "Amount": "-43.27",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9368,8 +9281,8 @@
         "Amount": "-5.23",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9383,8 +9296,8 @@
         "Amount": "-7.42",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Transportation",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9398,8 +9311,8 @@
         "Amount": "-20.71",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9413,8 +9326,8 @@
         "Amount": "-5.10",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9428,8 +9341,8 @@
         "Amount": "-100.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Business",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9443,8 +9356,8 @@
         "Amount": "-19.87",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9458,8 +9371,8 @@
         "Amount": "-21.55",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9473,8 +9386,8 @@
         "Amount": "-121.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9488,8 +9401,8 @@
         "Amount": "-50.60",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9503,8 +9416,8 @@
         "Amount": "-66.16",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9518,8 +9431,8 @@
         "Amount": "-31.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9533,8 +9446,8 @@
         "Amount": "-25.36",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9548,8 +9461,8 @@
         "Amount": "-16.05",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9563,8 +9476,8 @@
         "Amount": "-23.38",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9578,8 +9491,8 @@
         "Amount": "-68.31",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9593,8 +9506,8 @@
         "Amount": "-105.00",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Entertainment",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9608,8 +9521,8 @@
         "Amount": "-105.62",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Groceries",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9623,8 +9536,8 @@
         "Amount": "-20.06",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9638,8 +9551,8 @@
         "Amount": "-5.31",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9653,8 +9566,8 @@
         "Amount": "-45.25",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Restaurants",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9668,8 +9581,8 @@
         "Amount": "-5.31",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Coffee",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {
@@ -9683,8 +9596,8 @@
         "Amount": "-15.53",
         "Memo": ""
       },
-      "category": null,
-      "mapped": false,
+      "category": "Shopping",
+      "mapped": true,
       "source_file": "Chase8592_Activity20250101_20251231_20260313.CSV"
     },
     {

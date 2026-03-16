@@ -185,6 +185,7 @@ body {
   border-left: 4px solid #6366f1;
 }
 
+.summary-table .summary-total-row,
 .summary-table .payments-net-row {
   background-color: rgba(99, 102, 241, 0.12) !important;
   font-weight: 600;

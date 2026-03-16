@@ -180,15 +180,10 @@ function App() {
     }, 1000); // Poll every second
     
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 300000); // 5 minute timeout
-      
       const response = await fetch(`${API_URL}/auto-map-all`, {
         method: 'POST',
-        signal: controller.signal,
       });
       
-      clearTimeout(timeoutId);
       clearInterval(progressInterval);
 
       if (!response.ok) {
@@ -223,11 +218,7 @@ function App() {
       console.error('Error auto-mapping:', error);
       let errorMessage = 'Unknown error';
       if (error instanceof Error) {
-        if (error.name === 'AbortError') {
-          errorMessage = 'Request timed out. The auto-mapping process may still be running. Please check the review screen.';
-        } else {
-          errorMessage = error.message;
-        }
+        errorMessage = error.message;
       } else if (typeof error === 'string') {
         errorMessage = error;
       }
@@ -656,7 +647,7 @@ function App() {
                 onClick={handleAutoMapAll}
                 disabled={autoMapping || loading}
               >
-                {autoMapping ? 'Auto-mapping...' : '🤖 Auto-map All Remaining'}
+                {autoMapping ? `Auto-mapping... (${progress.mapped}/${progress.total} mapped)` : '🤖 Auto-map All Remaining'}
               </button>
             </div>
             {reviewLoading ? (
@@ -767,6 +758,33 @@ function App() {
                               </tr>
                             );
                           })}
+                        <tr className="summary-total-row">
+                          <td><strong>Total</strong></td>
+                          {summaryMonths.map((month) => {
+                            const monthTotal = Object.values(summaryData.summary.categories || {}).reduce(
+                              (sum, catTotals) => sum + (catTotals[month] || 0),
+                              0
+                            );
+                            return (
+                              <td key={month}>
+                                {typeof monthTotal === 'number' ? formatCurrency(monthTotal) : '-'}
+                              </td>
+                            );
+                          })}
+                          <td>
+                            {formatCurrency(
+                              summaryMonths.reduce(
+                                (sum, month) =>
+                                  sum +
+                                  Object.values(summaryData.summary.categories || {}).reduce(
+                                    (mSum, catTotals) => mSum + (catTotals[month] || 0),
+                                    0
+                                  ),
+                                0
+                              )
+                            )}
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   ) : (
@@ -916,7 +934,7 @@ function App() {
                       disabled={autoMapping || loading || rows.every(r => r.mapped)}
                       className="auto-map-btn"
                     >
-                      {autoMapping ? 'Auto-mapping...' : '🤖 Auto-map All Remaining'}
+                      {autoMapping ? `Auto-mapping... (${progress.mapped}/${progress.total} mapped)` : '🤖 Auto-map All Remaining'}
                     </button>
                   </>
                 )}

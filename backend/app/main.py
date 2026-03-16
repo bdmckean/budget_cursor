@@ -1192,6 +1192,11 @@ def rows_match(row1: Dict, row2: Dict) -> bool:
 
 def find_matching_category(row_data: Dict) -> Optional[str]:
     """Find a matching category from previous mappings"""
+    # Special case: payment/transfer descriptions should map to Payment
+    desc = (row_data.get("Description") or row_data.get("description") or "").lower()
+    if "payment thank you" in desc or (row_data.get("Type") or "").lower() == "payment":
+        return "Payment"
+
     # Load all previous mappings
     all_mappings = load_all_mappings()
 
