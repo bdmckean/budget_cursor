@@ -720,7 +720,9 @@ def add_category(request: AddCategoryRequest, confirm: Optional[str] = Query(Non
     corrected_category, corrections_made = check_and_correct_category(original_category)
 
     # If corrections were made and not confirmed, return correction info without adding
-    if corrections_made and not confirm_bool:
+    # Exception: if the only change is capitalization (e.g. "books" -> "Books"), add directly
+    capitalization_only = corrected_category.lower() == original_category.lower()
+    if corrections_made and not confirm_bool and not capitalization_only:
         return {
             "original": original_category,
             "corrected": corrected_category,
@@ -1205,8 +1207,14 @@ def find_matching_category(row_data: Dict) -> Optional[str]:
     return None
 
 
+# Categories that represent payments/transfers between accounts (excluded from main spending)
+PAYMENT_CATEGORIES = {"Payment", "Transfer"}
+
+
 def calculate_spending_summary() -> Tuple[Dict[str, Dict], List[str]]:
-    """Aggregate spending totals per category per month across all files."""
+    """Aggregate spending totals per category per month across all files.
+    Excludes Payment and Transfer from main spending; those go in a separate summary.
+    """
     # Load both saved mappings and current progress
     all_mappings = load_all_mappings()
 
@@ -1224,9 +1232,10 @@ def calculate_spending_summary() -> Tuple[Dict[str, Dict], List[str]]:
             ]
             all_mappings.extend(current_progress)
 
-    # Aggregate across all files - single summary structure
-    summary: Dict[str, Dict] = {"categories": {}}
+    # Main spending (excludes Payment, Transfer)
+    summary: Dict[str, Dict] = {"categories": {}, "payments": {}}
     months_set = set()
+    payments_months_set = set()
 
     for mapping in all_mappings:
         if not mapping.get("mapped") or not mapping.get("category"):
@@ -1245,33 +1254,43 @@ def calculate_spending_summary() -> Tuple[Dict[str, Dict], List[str]]:
 
         category = mapping.get("category")
 
-        # Normalize amount based on category:
-        # - Income: normalize to negative (money coming in)
-        # - Expenses: normalize to positive (money going out)
-        if category == "Income":
-            # Income should be negative (money coming in)
-            normalized_amount = -abs(amount)
+        if category in PAYMENT_CATEGORIES:
+            # Payments/transfers: use raw signed amount so sent/received cancel out
+            signed_amount = amount
+            if signed_amount == 0:
+                continue
+            payments_months_set.add(month_key)
+            payment_summary = summary["payments"].setdefault(category, {})
+            payment_summary[month_key] = (
+                payment_summary.get(month_key, 0.0) + signed_amount
+            )
         else:
-            # Expenses should be positive (money going out)
-            normalized_amount = abs(amount)
+            # Main spending: normalize amount
+            # - Income: normalize to negative (money coming in)
+            # - Expenses: normalize to positive (money going out)
+            if category == "Income":
+                normalized_amount = -abs(amount)
+            else:
+                normalized_amount = abs(amount)
 
-        if normalized_amount == 0:
-            continue
+            if normalized_amount == 0:
+                continue
 
-        months_set.add(month_key)
-
-        # Aggregate directly into categories (no file grouping)
-        category_summary = summary["categories"].setdefault(category, {})
-        category_summary[month_key] = (
-            category_summary.get(month_key, 0.0) + normalized_amount
-        )
+            months_set.add(month_key)
+            category_summary = summary["categories"].setdefault(category, {})
+            category_summary[month_key] = (
+                category_summary.get(month_key, 0.0) + normalized_amount
+            )
 
     # Round values for presentation
     for month_totals in summary["categories"].values():
         for month_key, value in month_totals.items():
             month_totals[month_key] = round(value, 2)
+    for month_totals in summary["payments"].values():
+        for month_key, value in month_totals.items():
+            month_totals[month_key] = round(value, 2)
 
-    months_list = sorted(months_set)
+    months_list = sorted(months_set | payments_months_set)
     return summary, months_list
 
 

@@ -180,6 +180,16 @@ body {
   background-color: rgba(148, 163, 184, 0.12);
 }
 
+.summary-card.payments-summary {
+  margin-top: 1.5rem;
+  border-left: 4px solid #6366f1;
+}
+
+.summary-table .payments-net-row {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  font-weight: 600;
+}
+
 .summary-status {
   color: #4b5563;
   font-size: 1rem;
@@ -292,6 +302,12 @@ body {
 .review-detail-item strong {
   color: #2c3e50;
   margin-right: 0.5rem;
+}
+
+.review-table th:nth-child(3),
+.review-table td.review-amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 .review-category {

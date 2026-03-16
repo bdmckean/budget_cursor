@@ -81,16 +81,18 @@ function App() {
     loadProgress();
   }, []);
 
-  const loadProgress = async () => {
+  const loadProgress = async (preserveIndex = false) => {
     try {
       const response = await fetch(`${API_URL}/progress`);
       const data = await response.json();
       if (data.rows && data.rows.length > 0) {
         setRows(data.rows);
         setProgress({ total: data.total_rows, mapped: data.mapped_count });
-        // Find first unmapped row
-        const unmappedIndex = data.rows.findIndex(r => !r.mapped);
-        setCurrentIndex(unmappedIndex >= 0 ? unmappedIndex : 0);
+        // Only reset to first unmapped row when not editing a specific row
+        if (!preserveIndex) {
+          const unmappedIndex = data.rows.findIndex(r => !r.mapped);
+          setCurrentIndex(unmappedIndex >= 0 ? unmappedIndex : 0);
+        }
         // Set current file name from first row if not already set
         if (!currentFileName && data.rows[0]?.source_file) {
           setCurrentFileName(data.rows[0].source_file);
@@ -238,7 +240,7 @@ function App() {
   const handleReviewItem = (rowIndex) => {
     setCurrentIndex(rowIndex);
     navigate('/mapping');
-    loadProgress();
+    loadProgress(true); // Preserve index so we show the row being edited
   };
 
   const handleFileUpload = async (e) => {
@@ -564,6 +566,26 @@ function App() {
     return value.toLocaleString(undefined, { style: 'currency', currency: 'USD' });
   };
 
+  const extractAmountFromRow = (originalData) => {
+    if (!originalData || typeof originalData !== 'object') return null;
+    const amountKeys = Object.keys(originalData).filter(
+      (k) => k && /amount|debit|credit|value|charge/i.test(k)
+    );
+    for (const key of amountKeys) {
+      const raw = originalData[key];
+      if (raw === null || raw === undefined || raw === '') continue;
+      const str = String(raw).replace(/,/g, '').replace(/\$/g, '').trim();
+      const isNegative =
+        (str.startsWith('(') && str.endsWith(')')) || str.startsWith('-');
+      const numStr = str.replace(/[()]/g, '').replace(/^-/, '');
+      const num = parseFloat(numStr);
+      if (!Number.isNaN(num)) {
+        return isNegative ? -num : num;
+      }
+    }
+    return null;
+  };
+
   const currentRow = rows && rows.length > 0 && currentIndex < rows.length ? rows[currentIndex] : null;
   const summaryMonths = summaryData?.months || [];
 
@@ -650,6 +672,7 @@ function App() {
                       <tr>
                         <th>Row</th>
                         <th>Transaction Details</th>
+                        <th>Amount</th>
                         <th>Category</th>
                         <th>Action</th>
                       </tr>
@@ -667,6 +690,9 @@ function App() {
                                 </div>
                               ))}
                             </div>
+                          </td>
+                          <td className="review-amount">
+                            {formatCurrency(extractAmountFromRow(row.original_data))}
                           </td>
                           <td>
                             <span className="review-category">{row.category}</span>
@@ -697,55 +723,133 @@ function App() {
               <p className="summary-status">Loading summary...</p>
             ) : summaryError ? (
               <p className="summary-status error">{summaryError}</p>
-            ) : summaryData && summaryData.summary?.categories && Object.keys(summaryData.summary.categories).length > 0 ? (
-              <div className="summary-card">
-                <div className="summary-card-header">
-                  <h3>All Files Combined</h3>
-                  <p className="summary-card-subtitle">
-                    Total categories: {Object.keys(summaryData.summary.categories).length}
-                  </p>
+            ) : summaryData && (Object.keys(summaryData.summary?.categories || {}).length > 0 || Object.keys(summaryData.summary?.payments || {}).length > 0) ? (
+              <>
+                <div className="summary-card">
+                  <div className="summary-card-header">
+                    <h3>Spending (Excludes Payments & Transfers)</h3>
+                    <p className="summary-card-subtitle">
+                      Total categories: {Object.keys(summaryData.summary.categories || {}).length}
+                    </p>
+                  </div>
+                  {summaryMonths.length > 0 && Object.keys(summaryData.summary.categories || {}).length > 0 ? (
+                    <table className="summary-table">
+                      <thead>
+                        <tr>
+                          <th>Category</th>
+                          {summaryMonths.map((month) => (
+                            <th key={month}>{formatMonth(month)}</th>
+                          ))}
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {Object.keys(summaryData.summary.categories)
+                          .sort((a, b) => a.localeCompare(b))
+                          .map((category) => {
+                            const monthTotals = summaryData.summary.categories[category] || {};
+                            const categoryTotal = summaryMonths.reduce(
+                              (sum, month) => sum + (monthTotals[month] || 0),
+                              0
+                            );
+                            return (
+                              <tr key={category}>
+                                <td>{category}</td>
+                                {summaryMonths.map((month) => {
+                                  const value = monthTotals[month];
+                                  return (
+                                    <td key={month}>
+                                      {typeof value === 'number' ? formatCurrency(value) : '-'}
+                                    </td>
+                                  );
+                                })}
+                                <td>{formatCurrency(categoryTotal)}</td>
+                              </tr>
+                            );
+                          })}
+                      </tbody>
+                    </table>
+                  ) : (
+                    <p className="summary-status">No spending data yet.</p>
+                  )}
                 </div>
-                {summaryMonths.length > 0 ? (
-                  <table className="summary-table">
-                    <thead>
-                      <tr>
-                        <th>Category</th>
-                        {summaryMonths.map((month) => (
-                          <th key={month}>{formatMonth(month)}</th>
-                        ))}
-                        <th>Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {Object.keys(summaryData.summary.categories)
-                        .sort((a, b) => a.localeCompare(b))
-                        .map((category) => {
-                          const monthTotals = summaryData.summary.categories[category] || {};
-                          const categoryTotal = summaryMonths.reduce(
-                            (sum, month) => sum + (monthTotals[month] || 0),
-                            0
-                          );
-                          return (
-                            <tr key={category}>
-                              <td>{category}</td>
-                              {summaryMonths.map((month) => {
-                                const value = monthTotals[month];
-                                return (
-                                  <td key={month}>
-                                    {typeof value === 'number' ? formatCurrency(value) : '-'}
-                                  </td>
-                                );
-                              })}
-                              <td>{formatCurrency(categoryTotal)}</td>
-                            </tr>
-                          );
-                        })}
-                    </tbody>
-                  </table>
-                ) : (
-                  <p className="summary-status">No monthly data available yet.</p>
+
+                {summaryData.summary?.payments && Object.keys(summaryData.summary.payments).length > 0 && (
+                  <div className="summary-card payments-summary">
+                    <div className="summary-card-header">
+                      <h3>Payments & Transfers</h3>
+                      <p className="summary-card-subtitle">
+                        Sent/received between accounts — should net to zero
+                      </p>
+                    </div>
+                    {summaryMonths.length > 0 ? (
+                      <table className="summary-table">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            {summaryMonths.map((month) => (
+                              <th key={month}>{formatMonth(month)}</th>
+                            ))}
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {Object.keys(summaryData.summary.payments)
+                            .sort((a, b) => a.localeCompare(b))
+                            .map((category) => {
+                              const monthTotals = summaryData.summary.payments[category] || {};
+                              const categoryTotal = summaryMonths.reduce(
+                                (sum, month) => sum + (monthTotals[month] || 0),
+                                0
+                              );
+                              return (
+                                <tr key={category}>
+                                  <td>{category}</td>
+                                  {summaryMonths.map((month) => {
+                                    const value = monthTotals[month];
+                                    return (
+                                      <td key={month}>
+                                        {typeof value === 'number' ? formatCurrency(value) : '-'}
+                                      </td>
+                                    );
+                                  })}
+                                  <td>{formatCurrency(categoryTotal)}</td>
+                                </tr>
+                              );
+                            })}
+                          <tr className="payments-net-row">
+                            <td><strong>Net (should cancel out)</strong></td>
+                            {summaryMonths.map((month) => {
+                              const net = Object.values(summaryData.summary.payments).reduce(
+                                (sum, catTotals) => sum + (catTotals[month] || 0),
+                                0
+                              );
+                              return (
+                                <td key={month}>
+                                  {typeof net === 'number' ? formatCurrency(net) : '-'}
+                                </td>
+                              );
+                            })}
+                            <td>
+                              {formatCurrency(
+                                summaryMonths.reduce(
+                                  (sum, month) =>
+                                    sum +
+                                    Object.values(summaryData.summary.payments).reduce(
+                                      (mSum, catTotals) => mSum + (catTotals[month] || 0),
+                                      0
+                                    ),
+                                  0
+                                )
+                              )}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    ) : null}
+                  </div>
                 )}
-              </div>
+              </>
             ) : (
               <p className="summary-status">No mapped transactions yet. Map some rows to see spending insights.</p>
             )}

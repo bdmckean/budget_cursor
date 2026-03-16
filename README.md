@@ -166,7 +166,7 @@ budget_cursor/
 ## Budget Categories
 
 The application includes these default categories:
-- Food & Dining
+- Restaurants
 - Transportation
 - Shopping
 - Bills & Utilities
@@ -175,7 +175,8 @@ The application includes these default categories:
 - Healthcare
 - Education
 - Personal Care
-- Gifts & Donations
+- Donations
+- Gifts
 - Income
 - Other
 

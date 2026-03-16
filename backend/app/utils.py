@@ -53,7 +53,7 @@ def load_categories() -> List[str]:
 
     # Return default categories if file doesn't exist or is invalid
     default_categories = [
-        "Food & Dining",
+        "Restaurants",
         "Groceries",
         "Transportation",
         "Shopping",
@@ -64,7 +64,8 @@ def load_categories() -> List[str]:
         "Healthcare",
         "Education",
         "Personal Care",
-        "Gifts & Donations",
+        "Donations",
+        "Gifts",
         "Business",
         "Income",
         "Other",
