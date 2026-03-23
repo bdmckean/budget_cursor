@@ -23,6 +23,7 @@ Budget Cursor is a budget planning application that helps users analyze and cate
 - **Progress persistence** — Resume mapping from where you left off
 - **Spending insights** — Monthly and yearly totals, averages, and category breakdowns
 - **Payment/transfer handling** — Correctly separates payments from spending for accurate analysis
+- **Automatic batch loading** *(Planned)* — Load a directory of CSVs; normalize formats; deduplicate; auto-map; review and correct
 
 ---
 
@@ -108,6 +109,18 @@ Budget Cursor is a budget planning application that helps users analyze and cate
 | Merge on upload | When re-uploading, merge with existing mappings for that file | ✅ |
 | Save on map | Progress and mappings saved after each manual or auto mapping | ✅ |
 
+### 2.9 Automatic Batch Loading (Planned)
+| Requirement | Description | Status |
+|-------------|-------------|--------|
+| Directory input | Specify a directory path; app loads all CSV files from that directory | Planned |
+| Common format | Analyze each file's headers (categories, descriptions, date, amount columns); map to common schema | Planned |
+| Format detection | Detect Wise, Chase, USAA, and other formats; apply appropriate adapter | Planned |
+| Deduplication | Ensure no duplicate files or duplicate transaction entries across loaded files | Planned |
+| Fingerprint matching | Use row fingerprint (date, amount, description) to identify duplicates across files | Planned |
+| Batch auto-map | After loading, automatically categorize all entries using existing rules + AI | Planned |
+| Review & revise | UI to review batch results, correct mappings, and re-run categorization where needed | Planned |
+| Refresh summaries | Recalculate spending summaries after corrections; no re-load required | Planned |
+
 ---
 
 ## 3. User Flows
@@ -149,6 +162,18 @@ Budget Cursor is a budget planning application that helps users analyze and cate
 5. File loads from saved mappings into progress; user is taken to Mapping view
 6. User can now map remaining rows or review that file
 
+### 3.6 Automatic Batch Loading (Planned)
+1. User specifies a directory path (e.g., via config, env var, or UI)
+2. App scans the directory for all `.csv` files
+3. For each file:
+   - Detects format (Wise, Chase, USAA, etc.) and applies adapter
+   - Maps headers to common schema (Transaction Date, Amount, Description)
+   - Loads rows; deduplicates against already-loaded transactions (fingerprint)
+4. App runs batch auto-map: exact-match first, then AI for remaining rows
+5. User reviews results in Review view; edits any incorrect mappings
+6. User triggers "Refresh Summary" or navigates to Spending Summary
+7. Totals recalculate from corrected mappings without re-loading files
+
 ---
 
 ## 4. Behavior Specifications
@@ -177,6 +202,16 @@ Budget Cursor is a budget planning application that helps users analyze and cate
 - **Mappings:** Persistent; all files; used for Files page, Spending Summary, and matching on re-upload/auto-map
 - **Sync:** Each map/auto-map saves to both progress and mappings for the current file
 
+### 4.5 Automatic Batch Loading Behavior (Planned)
+- **Directory source:** Path provided via config (`BATCH_CSV_DIR`) or UI; only `.csv` files loaded
+- **Format mapping:** Each file's headers mapped to common keys (Transaction Date, Amount, Description); adapters per format (Wise, Chase, USAA); category columns from source (e.g., Chase "Category") ignored in favor of unified categorization
+- **Common schema:** All rows normalized to `{ "Transaction Date", "Amount", "Description" }`; non-USD amounts converted to USD using historical FX rates where applicable
+- **Deduplication:** Before adding rows, compute fingerprint (date + amount + description); if fingerprint exists in any loaded file, skip or merge; avoid double-counting across files
+- **Duplicate files:** If same filename already in mappings, merge new rows; skip files with no new rows
+- **Batch auto-map:** After load, run auto-map-all logic across all new rows; save to mappings per file
+- **Review & revise:** Same Review view as manual flow; edits persist to mappings; user can change any category
+- **Refresh summaries:** Spending Summary reads from mappings; corrections in Review are reflected on next navigation to Summary (or explicit refresh if added)
+
 ---
 
 ## 5. API Endpoints
@@ -197,6 +232,8 @@ Budget Cursor is a budget planning application that helps users analyze and cate
 | GET | `/files` | Get list of files with mapping status (mapped/total, complete) |
 | POST | `/load-file` | Load a file from saved mappings into progress |
 | GET | `/spending-summary` | Get spending totals by category and month |
+| POST | `/batch-load` | *(Planned)* Load all CSVs from a directory; deduplicate; auto-map |
+| GET | `/batch-load/status` | *(Planned)* Status of batch load (files found, rows loaded, mapped count) |
 
 ---
 
