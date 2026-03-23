@@ -34,10 +34,15 @@ class CSVRowValidator:
         self.normalized_headers = [h.strip() if h else "" for h in headers]
 
         # Find date column(s) - use original headers
+        # Include "created", "finished" for Wise/TransferWise format ("Created on", "Finished on")
         self.date_columns = [
             i
             for i, header in enumerate(self.headers)
-            if header and "date" in header.lower()
+            if header
+            and any(
+                token in header.lower()
+                for token in ["date", "created", "finished"]
+            )
         ]
 
         # Find amount column(s) - use original headers

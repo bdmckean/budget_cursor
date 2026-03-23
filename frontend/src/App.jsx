@@ -60,13 +60,15 @@ function App() {
   const [summaryError, setSummaryError] = useState(null);
   const [reviewData, setReviewData] = useState(null);
   const [reviewLoading, setReviewLoading] = useState(false);
+  const [filesData, setFilesData] = useState(null);
+  const [filesLoading, setFilesLoading] = useState(false);
   const [autoMapping, setAutoMapping] = useState(false);
   const fileInputRef = React.useRef(null);
 
   // Sync activeView with URL path
   useEffect(() => {
     const path = location.pathname.substring(1) || 'mapping';
-    const validViews = ['mapping', 'summary', 'review'];
+    const validViews = ['mapping', 'summary', 'review', 'files'];
     const view = validViews.includes(path) ? path : 'mapping';
     setActiveView(view);
   }, [location]);
@@ -140,13 +142,32 @@ function App() {
     }
   }, []);
 
+  const loadFiles = useCallback(async () => {
+    setFilesLoading(true);
+    try {
+      const response = await fetch(`${API_URL}/files`);
+      if (!response.ok) {
+        throw new Error(`Failed with status ${response.status}`);
+      }
+      const data = await response.json();
+      setFilesData(data);
+    } catch (error) {
+      console.error('Error loading files:', error);
+      setFilesData(null);
+    } finally {
+      setFilesLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
     if (activeView === 'summary') {
       loadSummary();
     } else if (activeView === 'review') {
       loadReview();
+    } else if (activeView === 'files') {
+      loadFiles();
     }
-  }, [activeView, loadSummary, loadReview]);
+  }, [activeView, loadSummary, loadReview, loadFiles]);
 
   const handleViewChange = (view) => {
     // Navigate to the new view - this updates the URL and browser history
@@ -154,6 +175,28 @@ function App() {
     // activeView will be updated by the useEffect that watches location
     if (view === 'mapping') {
       loadProgress();
+    }
+  };
+
+  const handleLoadFile = async (filename) => {
+    setLoading(true);
+    try {
+      const response = await fetch(`${API_URL}/load-file`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename }),
+      });
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.detail || `Failed to load file`);
+      }
+      setCurrentFileName(filename);
+      await loadProgress();
+      handleViewChange('mapping');
+    } catch (error) {
+      alert('Error loading file: ' + error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -580,6 +623,73 @@ function App() {
   const currentRow = rows && rows.length > 0 && currentIndex < rows.length ? rows[currentIndex] : null;
   const summaryMonths = summaryData?.months || [];
 
+  // Group months by year for per-year totals and monthly averages
+  const yearSummaryData = React.useMemo(() => {
+    if (!summaryData?.summary?.categories || summaryMonths.length === 0) return null;
+    const yearsByMonths = {};
+    summaryMonths.forEach((m) => {
+      const year = m.startsWith('Unknown') ? 'Unknown' : m.substring(0, 4);
+      if (!yearsByMonths[year]) yearsByMonths[year] = [];
+      yearsByMonths[year].push(m);
+    });
+    const years = Object.keys(yearsByMonths).filter((y) => y !== 'Unknown').sort();
+    if (years.length === 0) return null;
+    const categories = Object.keys(summaryData.summary.categories).sort((a, b) => a.localeCompare(b));
+    const byCategory = {};
+    categories.forEach((cat) => {
+      const monthTotals = summaryData.summary.categories[cat] || {};
+      byCategory[cat] = years.map((year) => {
+        const months = yearsByMonths[year] || [];
+        const total = months.reduce((s, m) => s + (monthTotals[m] || 0), 0);
+        const avg = months.length > 0 ? total / months.length : 0;
+        return { total, avg, monthCount: months.length };
+      });
+    });
+    const totalByYear = years.map((year) => {
+      const months = yearsByMonths[year] || [];
+      const total = Object.values(summaryData.summary.categories || {}).reduce(
+        (s, catTotals) => s + months.reduce((mSum, m) => mSum + (catTotals[m] || 0), 0),
+        0
+      );
+      const avg = months.length > 0 ? total / months.length : 0;
+      return { total, avg, monthCount: months.length };
+    });
+    return { years, yearsByMonths, byCategory, totalByYear, categories };
+  }, [summaryData, summaryMonths]);
+
+  const paymentsYearSummaryData = React.useMemo(() => {
+    if (!summaryData?.summary?.payments || Object.keys(summaryData.summary.payments).length === 0 || summaryMonths.length === 0) return null;
+    const yearsByMonths = {};
+    summaryMonths.forEach((m) => {
+      const year = m.startsWith('Unknown') ? 'Unknown' : m.substring(0, 4);
+      if (!yearsByMonths[year]) yearsByMonths[year] = [];
+      yearsByMonths[year].push(m);
+    });
+    const years = Object.keys(yearsByMonths).filter((y) => y !== 'Unknown').sort();
+    if (years.length === 0) return null;
+    const categories = Object.keys(summaryData.summary.payments).sort((a, b) => a.localeCompare(b));
+    const byCategory = {};
+    categories.forEach((cat) => {
+      const monthTotals = summaryData.summary.payments[cat] || {};
+      byCategory[cat] = years.map((year) => {
+        const months = yearsByMonths[year] || [];
+        const total = months.reduce((s, m) => s + (monthTotals[m] || 0), 0);
+        const avg = months.length > 0 ? total / months.length : 0;
+        return { total, avg, monthCount: months.length };
+      });
+    });
+    const totalByYear = years.map((year) => {
+      const months = yearsByMonths[year] || [];
+      const total = Object.values(summaryData.summary.payments || {}).reduce(
+        (s, catTotals) => s + months.reduce((mSum, m) => mSum + (catTotals[m] || 0), 0),
+        0
+      );
+      const avg = months.length > 0 ? total / months.length : 0;
+      return { total, avg, monthCount: months.length };
+    });
+    return { years, yearsByMonths, byCategory, totalByYear, categories };
+  }, [summaryData, summaryMonths]);
+
   return (
     <div className="app">
       <header className="header">
@@ -607,6 +717,13 @@ function App() {
                 disabled={reviewLoading && activeView === 'review'}
               >
                 Review Mappings
+              </button>
+              <button
+                className={activeView === 'files' ? 'active' : ''}
+                onClick={() => handleViewChange('files')}
+                disabled={filesLoading && activeView === 'files'}
+              >
+                Files
               </button>
             </div>
             <button
@@ -638,7 +755,62 @@ function App() {
       </header>
 
       <main className="main">
-        {activeView === 'review' ? (
+        {activeView === 'files' ? (
+          <div className="files-section">
+            <h2>Files & Mapping Status</h2>
+            {filesLoading ? (
+              <p className="files-status">Loading files...</p>
+            ) : filesData && filesData.files && filesData.files.length > 0 ? (
+              <div className="files-content">
+                <p className="files-info">
+                  {filesData.files.filter((f) => f.is_complete).length} of {filesData.files.length} file(s) completely mapped
+                </p>
+                <div className="files-table-container">
+                  <table className="files-table">
+                    <thead>
+                      <tr>
+                        <th>File</th>
+                        <th>Mapped</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {filesData.files.map((file) => (
+                        <tr key={file.filename} className={file.is_complete ? 'file-complete' : ''}>
+                          <td className="file-name">{file.filename}</td>
+                          <td>{file.mapped_count}</td>
+                          <td>{file.total_rows}</td>
+                          <td>
+                            {file.is_complete ? (
+                              <span className="status-badge status-complete">Complete</span>
+                            ) : (
+                              <span className="status-badge status-incomplete">
+                                {file.unmapped_count} remaining
+                              </span>
+                            )}
+                          </td>
+                          <td>
+                            <button
+                              className="continue-btn"
+                              onClick={() => handleLoadFile(file.filename)}
+                              disabled={loading}
+                            >
+                              Continue
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ) : (
+              <p className="files-status">No files uploaded yet. Upload a CSV file to get started.</p>
+            )}
+          </div>
+        ) : activeView === 'review' ? (
           <div className="review-section">
             <div className="review-header">
               <h2>Review Mappings</h2>
@@ -724,6 +896,7 @@ function App() {
                     </p>
                   </div>
                   {summaryMonths.length > 0 && Object.keys(summaryData.summary.categories || {}).length > 0 ? (
+                    <div className="summary-table-container">
                     <table className="summary-table">
                       <thead>
                         <tr>
@@ -787,8 +960,71 @@ function App() {
                         </tr>
                       </tbody>
                     </table>
+                    </div>
                   ) : (
                     <p className="summary-status">No spending data yet.</p>
+                  )}
+                  {yearSummaryData && (
+                    <div className="year-summary-section">
+                      <h4 className="year-summary-title">Per Year Totals & Monthly Averages</h4>
+                      <div className="summary-table-container">
+                        <table className="summary-table year-summary-table">
+                          <thead>
+                            <tr>
+                              <th>Category</th>
+                              {yearSummaryData.years.flatMap((year) => [
+                                <th key={`${year}-total`}>{year} Total</th>,
+                                <th key={`${year}-avg`}>{year} Avg/mo</th>,
+                              ])}
+                              <th>All Total</th>
+                              <th>All Avg/mo</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {yearSummaryData.categories.map((category) => {
+                              const rowData = yearSummaryData.byCategory[category];
+                              const allTotal = rowData.reduce((s, r) => s + r.total, 0);
+                              const allMonthCount = rowData.reduce((s, r) => s + r.monthCount, 0);
+                              const allAvg = allMonthCount > 0 ? allTotal / allMonthCount : 0;
+                              return (
+                                <tr key={category}>
+                                  <td>{category}</td>
+                                  {rowData.map(({ total, avg }, i) => (
+                                    <React.Fragment key={i}>
+                                      <td>{formatCurrency(total)}</td>
+                                      <td>{formatCurrency(avg)}</td>
+                                    </React.Fragment>
+                                  ))}
+                                  <td>{formatCurrency(allTotal)}</td>
+                                  <td>{formatCurrency(allAvg)}</td>
+                                </tr>
+                              );
+                            })}
+                            <tr className="summary-total-row">
+                              <td><strong>Total</strong></td>
+                              {yearSummaryData.totalByYear.map(({ total, avg }, i) => (
+                                <React.Fragment key={i}>
+                                  <td>{formatCurrency(total)}</td>
+                                  <td>{formatCurrency(avg)}</td>
+                                </React.Fragment>
+                              ))}
+                              <td>
+                                {formatCurrency(yearSummaryData.totalByYear.reduce((s, r) => s + r.total, 0))}
+                              </td>
+                              <td>
+                                {formatCurrency(
+                                  (() => {
+                                    const t = yearSummaryData.totalByYear.reduce((s, r) => s + r.total, 0);
+                                    const n = yearSummaryData.totalByYear.reduce((s, r) => s + r.monthCount, 0);
+                                    return n > 0 ? t / n : 0;
+                                  })()
+                                )}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   )}
                 </div>
 
@@ -801,6 +1037,7 @@ function App() {
                       </p>
                     </div>
                     {summaryMonths.length > 0 ? (
+                      <div className="summary-table-container">
                       <table className="summary-table">
                         <thead>
                           <tr>
@@ -864,7 +1101,70 @@ function App() {
                           </tr>
                         </tbody>
                       </table>
+                      </div>
                     ) : null}
+                    {paymentsYearSummaryData && (
+                      <div className="year-summary-section">
+                        <h4 className="year-summary-title">Per Year Totals & Monthly Averages</h4>
+                        <div className="summary-table-container">
+                          <table className="summary-table year-summary-table">
+                            <thead>
+                              <tr>
+                                <th>Category</th>
+                                {paymentsYearSummaryData.years.flatMap((year) => [
+                                  <th key={`${year}-total`}>{year} Total</th>,
+                                  <th key={`${year}-avg`}>{year} Avg/mo</th>,
+                                ])}
+                                <th>All Total</th>
+                                <th>All Avg/mo</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {paymentsYearSummaryData.categories.map((category) => {
+                                const rowData = paymentsYearSummaryData.byCategory[category];
+                                const allTotal = rowData.reduce((s, r) => s + r.total, 0);
+                                const allMonthCount = rowData.reduce((s, r) => s + r.monthCount, 0);
+                                const allAvg = allMonthCount > 0 ? allTotal / allMonthCount : 0;
+                                return (
+                                  <tr key={category}>
+                                    <td>{category}</td>
+                                    {rowData.map(({ total, avg }, i) => (
+                                      <React.Fragment key={i}>
+                                        <td>{formatCurrency(total)}</td>
+                                        <td>{formatCurrency(avg)}</td>
+                                      </React.Fragment>
+                                    ))}
+                                    <td>{formatCurrency(allTotal)}</td>
+                                    <td>{formatCurrency(allAvg)}</td>
+                                  </tr>
+                                );
+                              })}
+                              <tr className="payments-net-row">
+                                <td><strong>Net (should cancel out)</strong></td>
+                                {paymentsYearSummaryData.totalByYear.map(({ total, avg }, i) => (
+                                  <React.Fragment key={i}>
+                                    <td>{formatCurrency(total)}</td>
+                                    <td>{formatCurrency(avg)}</td>
+                                  </React.Fragment>
+                                ))}
+                                <td>
+                                  {formatCurrency(paymentsYearSummaryData.totalByYear.reduce((s, r) => s + r.total, 0))}
+                                </td>
+                                <td>
+                                  {formatCurrency(
+                                    (() => {
+                                      const t = paymentsYearSummaryData.totalByYear.reduce((s, r) => s + r.total, 0);
+                                      const n = paymentsYearSummaryData.totalByYear.reduce((s, r) => s + r.monthCount, 0);
+                                      return n > 0 ? t / n : 0;
+                                    })()
+                                  )}
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </>

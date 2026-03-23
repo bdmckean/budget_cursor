@@ -140,6 +140,9 @@ test_output/**/*.json
 test_output/**/*.csv
 !test_output/**/.gitkeep
 
+# FX rates cache (Frankfurter API)
+**/fx_rates_cache.json
+
 # Extracted text cache
 extracted_text/
 !extracted_text/.gitkeep

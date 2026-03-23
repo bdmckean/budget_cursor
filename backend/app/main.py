@@ -27,6 +27,7 @@ from .utils import (
     load_all_mappings,
     MAPPINGS_FILE,
 )
+from .fx_rates import convert_to_usd
 
 # Load environment variables
 load_dotenv()
@@ -48,6 +49,67 @@ app.add_middleware(
 
 # Initialize spell checker
 spell = Speller(lang="en")
+
+# Wise/TransferWise CSV format detection
+WISE_REQUIRED_HEADERS = {"Created on", "Direction", "Source amount (after fees)"}
+
+
+def _is_wise_format(headers: List[str]) -> bool:
+    """Detect if CSV uses Wise/TransferWise export format."""
+    header_set = {h.strip() for h in headers if h}
+    return WISE_REQUIRED_HEADERS.issubset(header_set)
+
+
+def _transform_wise_row(row: Dict[str, str]) -> Dict[str, str]:
+    """
+    Transform a Wise CSV row into the standard format used by the validator.
+    Converts non-USD amounts to USD using historical FX rates (Frankfurter API).
+    Returns a dict with Transaction Date, Amount (signed, in USD), and Description.
+    """
+    created_on = (row.get("Created on") or "").strip()
+    date_part = created_on[:10] if len(created_on) >= 10 else created_on
+
+    direction = (row.get("Direction") or "").strip().upper()
+    source_str = (row.get("Source amount (after fees)") or "").strip()
+    target_str = (row.get("Target amount (after fees)") or "").strip()
+    source_currency = (row.get("Source currency") or "").strip().upper()
+    target_currency = (row.get("Target currency") or "").strip().upper()
+
+    amount_val = 0.0
+    currency = "USD"
+    try:
+        if direction == "OUT":
+            amount_val = -float(source_str.replace(",", ""))
+            currency = source_currency or "USD"
+        elif direction == "IN":
+            amount_val = float(target_str.replace(",", ""))
+            currency = target_currency or "USD"
+        else:
+            # NEUTRAL (e.g. currency conversion): use source as outflow
+            amount_val = -float(source_str.replace(",", "")) if source_str else 0.0
+            currency = source_currency or "USD"
+    except (ValueError, TypeError):
+        amount_val = 0.0
+
+    # Convert to USD for expense calculation (use historical rate for transaction date)
+    if currency and currency != "USD" and amount_val != 0:
+        usd_amount = convert_to_usd(abs(amount_val), date_part, currency)
+        if usd_amount is not None:
+            amount_val = usd_amount if amount_val > 0 else -usd_amount
+
+    parts = []
+    for key in ["Source name", "Target name", "Reference", "Category", "Note"]:
+        val = (row.get(key) or "").strip()
+        if val:
+            parts.append(val)
+    description = " | ".join(parts) if parts else "Wise transaction"
+
+    return {
+        "Transaction Date": date_part,
+        "Amount": str(amount_val),
+        "Description": description,
+    }
+
 
 # Ollama configuration
 # Use host.docker.internal to access host machine from Docker container
@@ -98,6 +160,10 @@ class SuggestCategoryResponse(BaseModel):
 
 
 class ResetRequest(BaseModel):
+    filename: str
+
+
+class LoadFileRequest(BaseModel):
     filename: str
 
 
@@ -260,6 +326,51 @@ def auto_map_all():
                 pass
 
 
+@app.get("/files")
+def get_files_status():
+    """Get list of files with mapping status - mapped count, total, and whether complete"""
+    all_mappings = {}
+    if MAPPINGS_FILE.exists():
+        try:
+            with open(MAPPINGS_FILE, "r") as f:
+                data = json.load(f)
+                if isinstance(data, dict):
+                    all_mappings = data
+        except (json.JSONDecodeError, IOError):
+            pass
+
+    # Include current progress - it may have a file not yet fully in mappings
+    progress_data = load_progress()
+    current_filename = (
+        progress_data[0].get("source_file") if progress_data else None
+    )
+    if current_filename and current_filename not in all_mappings:
+        all_mappings[current_filename] = progress_data
+    elif current_filename and progress_data:
+        # Progress may be more up-to-date than saved mappings
+        all_mappings[current_filename] = progress_data
+
+    files = []
+    for filename, rows in all_mappings.items():
+        if not isinstance(rows, list):
+            continue
+        total = len(rows)
+        mapped = sum(1 for r in rows if r.get("mapped"))
+        files.append(
+            {
+                "filename": filename,
+                "total_rows": total,
+                "mapped_count": mapped,
+                "unmapped_count": total - mapped,
+                "is_complete": total > 0 and mapped == total,
+            }
+        )
+
+    # Sort by filename
+    files.sort(key=lambda f: f["filename"].lower())
+    return {"files": files}
+
+
 @app.get("/review")
 def get_review_data():
     """Get all mapped rows for review"""
@@ -371,7 +482,9 @@ async def upload_file(file: UploadFile = File(...)):
                 )
 
             # Initialize CSV validator with headers
-            validator = CSVRowValidator(csv_reader.fieldnames)
+            headers = csv_reader.fieldnames
+            validator = CSVRowValidator(headers)
+            is_wise = _is_wise_format(headers)
         except UnicodeDecodeError:
             if trace:
                 tracer.add_span(
@@ -389,17 +502,23 @@ async def upload_file(file: UploadFile = File(...)):
         rows = []
         skipped_count = 0
         total_rows_read = 0
+        wise_validator = (
+            CSVRowValidator(["Transaction Date", "Amount", "Description"])
+            if is_wise
+            else None
+        )
         for idx, row in enumerate(csv_reader):
             total_rows_read += 1
-            # Skip rows that are not fully populated
-            if not validator.is_row_valid(row):
+            row_to_validate = _transform_wise_row(row) if is_wise else row
+            active_validator = wise_validator if is_wise else validator
+            if not active_validator.is_row_valid(row_to_validate):
                 skipped_count += 1
                 continue
 
             rows.append(
                 {
                     "row_index": len(rows),  # Use sequential index after filtering
-                    "original_data": row,
+                    "original_data": row_to_validate,
                     "category": None,
                     "mapped": False,
                     "source_file": file.filename,  # Store source file name
@@ -690,6 +809,25 @@ def reset_mappings(request: ResetRequest):
     return {
         "message": f"Mappings reset for file: {request.filename}",
         "filename": request.filename,
+    }
+
+
+@app.post("/load-file")
+def load_file(request: LoadFileRequest):
+    """Load a file from saved mappings into progress (switch to work on that file)"""
+    rows = load_mappings_for_file(request.filename)
+    if not rows:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No mappings found for file: {request.filename}",
+        )
+    save_progress(rows)
+    mapped_count = sum(1 for r in rows if r.get("mapped"))
+    return {
+        "message": f"Loaded {request.filename}",
+        "filename": request.filename,
+        "total_rows": len(rows),
+        "mapped_count": mapped_count,
     }
 
 
@@ -1192,10 +1330,10 @@ def rows_match(row1: Dict, row2: Dict) -> bool:
 
 def find_matching_category(row_data: Dict) -> Optional[str]:
     """Find a matching category from previous mappings"""
-    # Special case: payment/transfer descriptions should map to Payment
+    # Special case: payment/transfer descriptions should map to Payment in
     desc = (row_data.get("Description") or row_data.get("description") or "").lower()
     if "payment thank you" in desc or (row_data.get("Type") or "").lower() == "payment":
-        return "Payment"
+        return "Payment in"
 
     # Load all previous mappings
     all_mappings = load_all_mappings()
@@ -1213,7 +1351,7 @@ def find_matching_category(row_data: Dict) -> Optional[str]:
 
 
 # Categories that represent payments/transfers between accounts (excluded from main spending)
-PAYMENT_CATEGORIES = {"Payment", "Transfer"}
+PAYMENT_CATEGORIES = {"Payment in", "Payment out", "Transfer in", "Transfer out"}
 
 
 def calculate_spending_summary() -> Tuple[Dict[str, Dict], List[str]]:

@@ -50,6 +50,31 @@ def test_upload_csv(client: TestClient, sample_csv_file):
     assert data["rows"][0]["mapped"] is False
 
 
+def test_upload_wise_csv(client: TestClient, wise_csv_file):
+    """Test uploading a Wise/TransferWise format CSV file."""
+    with open(wise_csv_file, "rb") as f:
+        response = client.post(
+            "/upload",
+            files={"file": ("wise_2025.csv", f, "text/csv")}
+        )
+
+    assert response.status_code == 200
+    data = response.json()
+    assert data["message"] == "File uploaded successfully"
+    assert data["total_rows"] == 2
+    rows = data["rows"]
+    assert len(rows) == 2
+    # Wise rows are transformed to standard format
+    assert "Transaction Date" in rows[0]["original_data"]
+    assert "Amount" in rows[0]["original_data"]
+    assert "Description" in rows[0]["original_data"]
+    # Row 0: 400 EUR OUT -> converted to USD (e.g. ~470)
+    assert float(rows[0]["original_data"]["Amount"]) < 0
+    assert abs(float(rows[0]["original_data"]["Amount"])) > 400
+    # Row 1: 2000 USD IN -> no conversion
+    assert rows[1]["original_data"]["Amount"] == "2000.0"
+
+
 def test_upload_non_csv_file(client: TestClient, tmp_path):
     """Test uploading a non-CSV file should fail."""
     txt_file = tmp_path / "test.txt"
